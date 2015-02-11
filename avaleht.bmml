@@ -12,6 +12,7 @@
     </control>
     <control controlID="4" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="185" y="207" w="394" h="266" measuredW="200" measuredH="212" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
+        <selectedIndex>0</selectedIndex>
         <text>Avaleht%0AKandidaadid%0AH%E4%E4leta%0AKandideeri%0AJ%E4lgi%20tulemusi</text>
       </controlProperties>
     </control>
