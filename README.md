@@ -1,2 +1,2 @@
 # Default
-Tiim: Ott, Hendrik, Diana
+Tiim: Ott Matiisen, Hendrik Rasmus Elmet, Diana Algma
