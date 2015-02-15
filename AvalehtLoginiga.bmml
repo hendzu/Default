@@ -20,28 +20,28 @@
         <text>Avaleht%0A%20%0AToimuvad%20k%F5ige%20ilusamate%20eesv%F5itlejate%20valimised%21%0A%20%0AH%E4%E4letamine%20kestab%20veebruari%20l%F5puni.</text>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::RoundButton" x="355" y="92" w="214" h="274" measuredW="32" measuredH="32" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::RoundButton" x="356" y="92" w="255" h="274" measuredW="32" measuredH="32" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <shape>roundRect</shape>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="435" y="317" w="56" h="19" measuredW="82" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="435" y="317" w="96" h="19" measuredW="82" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Logi%20sisse</text>
       </controlProperties>
     </control>
-    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="428" y="138" w="69" h="19" measuredW="92" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="428" y="138" w="103" h="19" measuredW="92" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
         <text>ID-kaardiga</text>
       </controlProperties>
     </control>
-    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="428" y="219" w="69" h="19" measuredW="99" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="428" y="219" w="103" h="19" measuredW="99" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Panga%20kaudu</text>
       </controlProperties>
     </control>
-    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="428" y="180" w="69" h="19" measuredW="73" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="428" y="180" w="103" h="19" measuredW="73" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Mobiil-ID</text>
       </controlProperties>
