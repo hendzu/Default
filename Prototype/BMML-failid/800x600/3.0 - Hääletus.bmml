@@ -1,0 +1,77 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="838" measuredH="619" mockupW="800" mockupH="600">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="38" y="19" w="800" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>E-h%E4%E4letus%0Ahttp%3A//www.defaulth%E4%E4letus.ee/vote</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="47" y="115" w="680" h="266" measuredW="200" measuredH="247" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>2</selectedIndex>
+        <size>20</size>
+        <text>Avaleht%0AKandidaadid%0AH%E4%E4leta%0AKandideeri%0AJ%E4lgi%20tulemusi</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::DataGrid" x="177" y="229" w="550" h="347" measuredW="323" measuredH="328" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>7</selectedIndex>
+        <size>20</size>
+        <text>Nimi%20%5E%2C%20Partei%20%5Ev%0AAatrox%2C%20%FCksikkandidaat%0AAlistar%2C%20The%20Great%20Barrier%0ACho%27Gath%2C%20Icathia%0ADarius%2C%20Noxus%0ADr.%20Mundo%2C%20Noxus%0AFiora%2C%20Demacia%20%0AGangplank%2C%20Bilgewater%0AGaren%2C%20Demacia%0AGnar%2C%20%FCksikkandidaat%0AHeimerdinger%2C%20Bandle%20City%0A%7B65L%2C%200R%7D</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::SearchBox" x="333" y="200" w="-1" h="-1" measuredW="120" measuredH="25" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Otsing</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="596" y="366" w="-1" h="-1" measuredW="69" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>H%E4%E4leta</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="742" y="115" w="62" h="-1" measuredW="61" measuredH="28" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Teemo</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="741" y="145" w="62" h="-1" measuredW="56" measuredH="28" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Yordle</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Button" x="734" y="195" w="97" h="34" measuredW="94" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <state>selected</state>
+        <text>Logi%20V%E4lja</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="188" y="130" w="-1" h="-1" measuredW="384" measuredH="28" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Teie%20h%E4%E4letuspiirkonnaks%20on%20m%E4%E4ratud%20Top.</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Label" x="188" y="157" w="-1" h="-1" measuredW="306" measuredH="28" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Selle%20muutmiseks%20v%F5tke%20%FChendust</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Link" x="500" y="158" w="-1" h="-1" measuredW="180" measuredH="26" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>%D5iguse%20Instituudiga</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="188" y="198" w="-1" h="-1" measuredW="138" measuredH="28" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Otsi%20kandidaati</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
