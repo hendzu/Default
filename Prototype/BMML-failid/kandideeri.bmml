@@ -28,7 +28,7 @@
     </control>
     <control controlID="8" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="278" y="288" w="-1" h="-1" measuredW="67" measuredH="105" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>%28%20%29%20Top%0A%28%20%29%20Mid%0A%28%20%29%20Bottom%0A%28%20%29%20Jungle%0A%28%20%29Support</text>
+        <text>%28%20%29%20Top%0A%28%20%29%20Mid%0A%28%20%29%20Adc%0A%28%20%29%20Jungle%0A%28%20%29Support</text>
       </controlProperties>
     </control>
     <control controlID="9" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="374" y="287" w="-1" h="-1" measuredW="88" measuredH="171" zOrder="6" locked="false" isInGroup="-1">
