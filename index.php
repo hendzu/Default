@@ -1,8 +1,4 @@
-    <?php 
-        require_once ("Includes/simplecms-config.php"); 
-        require_once  ("Includes/connectDB.php");
-        include("Includes/header.php");         
-     ?>
+  
 
 
     <div id="main">
@@ -17,18 +13,9 @@
             <h5>Customize your site</h5>
              After you login, you can add, delete, and modify web pages.
          </li>
-        <li class="asterisk">
-            <div class="visit">
-                To learn more about PHP, visit <a href="http://php.net" title="PHP.net Website">http://php.net</a>. 
-            </div>
-         </li>
     </ol>
 
 
     </div>
 
 </div> <!-- End of outer-wrapper which opens in header.php -->
-
-<?php 
-    include ("Includes/footer.php");
- ?>
