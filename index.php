@@ -11,7 +11,7 @@
         </li>
         <li class="two">
             <h5>Customize your site</h5>
-             After you login, you can add, delete, and modify web pages.
+             After you login, you can add, delete, and modify web pages...
          </li>
     </ol>
 
