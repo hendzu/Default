@@ -1,5 +1,7 @@
   
-
+	<?php 
+        include("header.html");         
+     ?>
 
     <div id="main">
     <h3>Get started with your website</h3>
@@ -17,5 +19,3 @@
 
 
     </div>
-
-</div> <!-- End of outer-wrapper which opens in header.php -->
