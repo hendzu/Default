@@ -8,5 +8,3 @@
 		<p>
 			<a href="http://defaultvalimised.azurewebsites.net/">Avaleht</a>
 		</p>
-	</body>
-</html>
