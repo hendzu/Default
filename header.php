@@ -21,4 +21,6 @@
 			<a href="http://defaultvalimised.azurewebsites.net/tulemused.php">Tulemused</a>
 		</p>
                 <div class="fb-login-button" data-max-rows="1" data-size="large" 
-                     data-show-faces="false" data-auto-logout-link="true"></div>
+                    data-show-faces="false" data-auto-logout-link="true">
+                    <img src="http://graph.facebook.com/sarfraz.anees/picture"></img>
+                </div>
