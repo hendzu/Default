@@ -92,8 +92,8 @@
 			<a href="http://defaultvalimised.azurewebsites.net/kandideeri.php">Kandideeri</a>
 			<a href="http://defaultvalimised.azurewebsites.net/tulemused.php">Tulemused</a>
 		</p>
-                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                <p><fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
                 </fb:login-button>
-
+                </p>
                 <div id="status">
                 </div>
