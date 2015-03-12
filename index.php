@@ -1,6 +1,5 @@
 <?php 
         include("header.php");
-		require_once  ("Database/connect.php");
 ?>
     
   <h1>Default valimised</h1>
