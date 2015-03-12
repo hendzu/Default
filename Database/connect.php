@@ -7,6 +7,7 @@ $myDB = "defaultAndmebaas";
 //connection to the database
 $dbhandle = mssql_connect($myServer, $myUser, $myPass)
   or die("Couldn't connect to SQL Server on $myServer"); 
+  echo "<hi> Kala</h1>"
 
 //select a database to work with
 $selected = mssql_select_db($myDB, $dbhandle)
