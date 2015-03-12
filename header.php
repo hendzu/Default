@@ -54,5 +54,5 @@
 			<a href="http://defaultvalimised.azurewebsites.net/tulemused.php">Tulemused</a>
 		</p>
                 <div class="fb-login-button" data-max-rows="1" data-size="large" 
-                    data-show-faces="true" data-auto-logout-link="true"></div>
-                
+                    data-show-faces="false" data-auto-logout-link="true" onlogin="checkLoginState();"></div>
+                <div id="user-info"></div>
