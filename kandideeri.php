@@ -9,16 +9,16 @@
         $session = $helper->getSessionFromRedirect();
       } catch(FacebookRequestException $ex) {
         // When Facebook returns an error
-        $html="<p>Kandideerimiseks peate olema sisse logitud.</p>";
+        //$html="<p>Kandideerimiseks peate olema sisse logitud.</p>";
       } catch(\Exception $ex) {
         // When validation fails or other local issues
-        $html="<p>Kandideerimiseks peate olema sisse logitud..</p>";
+        //$html="<p>Kandideerimiseks peate olema sisse logitud..</p>";
       }
       if ($session) {
         // Logged in
-        $html="<p>Saate kandideerida, kuid see leht pole veel valmis.</p>";
+        //$html="<p>Saate kandideerida, kuid see leht pole veel valmis.</p>";
       }
-      echo htmlentities($html);
+      //echo htmlentities($html);
 ?>
     
     <h1>Default valimised</h1>
