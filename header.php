@@ -53,6 +53,6 @@
 			<a href="http://defaultvalimised.azurewebsites.net/kandideeri.php">Kandideeri</a>
 			<a href="http://defaultvalimised.azurewebsites.net/tulemused.php">Tulemused</a>
 		</p>
-                <div class="fb-login-button" data-max-rows="1" data-size="large" 
-                    data-show-faces="false" data-auto-logout-link="true" onlogin="checkLoginState();"></div>
+                <div class="fb-login-button" onlogin="testApi();" data-max-rows="1" data-size="large" 
+                    data-show-faces="false" data-auto-logout-link="true"></div>
                 <div id="user-info"></div>
