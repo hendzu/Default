@@ -5,7 +5,7 @@
         // Use the login url on a link or button to redirect to Facebook for authentication
 
         $helper = new FacebookRedirectLoginHelper();
-      try {
+      /*try {
         $session = $helper->getSessionFromRedirect();
       } catch(FacebookRequestException $ex) {
         // When Facebook returns an error
@@ -17,7 +17,7 @@
       if ($session) {
         // Logged in
         //$html="<p>Saate kandideerida, kuid see leht pole veel valmis.</p>";
-      }
+      }*/
       //echo htmlentities($html);
 ?>
     
