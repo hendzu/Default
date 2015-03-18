@@ -41,8 +41,11 @@
                   
                     function testAPI() {
                         FB.api('/me', function(response) {
-                         userInfo.innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' +
-                         response.name;
+                            document.getElementById('status').innerHTML =
+                             'Thanks for logging in, ' + response.name + '!';
+    });
+                         //userInfo.innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' +
+                         //response.name;
                     });
                       }
                     </script>
@@ -55,4 +58,4 @@
 		</p>
                 <div class="fb-login-button" onlogin="testApi();" data-max-rows="1" data-size="large" 
                     data-show-faces="false" data-auto-logout-link="true"></div>
-                <div id="user-info"></div>
+                <div id="status"></div>
