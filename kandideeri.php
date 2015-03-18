@@ -3,7 +3,7 @@
 ?>
     
   <h1>Default valimised</h1>
-  <script>
+  
   $helper = new FacebookRedirectLoginHelper('your redirect URL here');
   $loginUrl = $helper->getLoginUrl();
   // Use the login url on a link or button to redirect to Facebook for authentication
@@ -22,7 +22,6 @@ if ($session) {
   // Logged in
   <p>Saate kandideerida, kuid see leht pole veel valmis.</p>
 }
-</script>
   <h2>Vabandame!</h2>
   <p>Antud leht ei ole hetkel valmis. Küsimuste tekkimiselt pöörduge meie arendustiimi liidri <a href=https://www.facebook.com/diana.algma>Diana</a> või kaasosalise <a href=https://www.facebook.com/hendrik.elmet>Hendriku</a> poole</p>
 </body>
