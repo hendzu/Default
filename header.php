@@ -8,6 +8,14 @@
                 <div id="fb-root"></div>
                 <script>
                     
+                    window.fbAsyncInit = function() {
+                        FB.init({
+                          appId      : '{your-app-id}',
+                          cookie     : true,  // enable cookies to allow the server to access 
+                                              // the session
+                          xfbml      : true,  // parse social plugins on this page
+                          version    : 'v2.2' // use version 2.2
+                        });
                   (function(d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0];
                     var userInfo = document.getElementById('user-info');
@@ -22,15 +30,15 @@
                     console.log(response);
                     if (response.status === 'connected') {
                       testAPI();
-                    //} else if (response.status === 'not_authorized') {
-                      // The person is logged into Facebook, but not your app.
-                      //document.getElementById('status').innerHTML = 'Please log ' +
-                      //  'into this app.';
-                    //} else {
-                      // The person is not logged into Facebook, so we're not sure if
-                      // they are logged into this app or not.
-                      //document.getElementById('status').innerHTML = 'Please log ' +
-                      //  'into Facebook.';
+                    } else if (response.status === 'not_authorized') {
+                      The person is logged into Facebook, but not your app.
+                      document.getElementById('status').innerHTML = 'Please log ' +
+                        'into this app.';
+                    } else {
+                      The person is not logged into Facebook, so we're not sure if
+                      they are logged into this app or not.
+                      document.getElementById('status').innerHTML = 'Please log ' +
+                        'into Facebook.';
                     }
                   }
                   function checkLoginState() {
@@ -40,9 +48,15 @@
                       }
                   
                     function testAPI() {
+                        console.log('Welcome!  Fetching your information.... ');
                         FB.api('/me', function(response) {
-                         userInfo.innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' +
-                         response.name;
+                            console.log('Successful login for: ' + response.name);
+                            document.getElementById('status').innerHTML =
+                            'Thanks for logging in, ' + response.name + '!';
+                    });
+                        //FB.api('/me', function(response) {
+                        // userInfo.innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' +
+                        // response.name;
                     });
                       }
                     </script>
