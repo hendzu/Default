@@ -1,29 +1,19 @@
 <?php
-$myServer = "cikj0w7mbn.database.windows.net";
-$myUser = "defaultkasutaja@cikj0w7mbn";
-$myPass = "Isherenow0";
-$myDB = "defaultAndmebaas"; 
-$dbhandle = mssql_connect($myServer, $myUser, $myPass)
-  or die("Couldn't connect to SQL Server on $myServer"); 
+Server: cikj0w7mbn.database.windows.net,1433
+SQL Database: defaultAndmebaas
+User Name: defaultkasutaja
 
-//select a database to work with
-$selected = mssql_select_db($myDB, $dbhandle)
-  or die("Couldn't open database $myDB"); 
-
-//declare the SQL statement that will query the database
-$query = "SELECT id, name, partei ";
-$query .= "FROM Kandidaadid ";
-
-//execute the SQL query and return records
-$result = mssql_query($query);
-
-$numRows = mssql_num_rows($result); 
-echo "<h1>" . $numRows . " Row" . ($numRows == 1 ? "" : "s") . " Returned </h1>"; 
-
-//display the results 
-while($row = mssql_fetch_array($result))
-{
-  echo "<li>" . $row["id"] . $row["name"] . $row["year"] . "</li>";
-}
-//close the connection
-mssql_close($dbhandle);
+PHP Data Objects(PDO) Sample Code:
+try {
+	$conn = new PDO ( \"sqlsrv:server = tcp:cikj0w7mbn.database.windows.net,1433; Database = defaultAndmebaas\", \"defaultkasutaja\", \"{your_password_here}\");
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+	}
+	catch ( PDOException $e ) {
+		print( \"Error connecting to SQL Server.\" );
+		die(print_r($e));
+		}
+		rSQL Server Extension Sample Code:
+		
+		$connectionInfo = array(\"UID\" => \"defaultkasutaja@cikj0w7mbn\", \"pwd\" => \"{your_password_here}\", \"Database\" => \"defaultAndmebaas\", \"LoginTimeout\" => 30, \"Encrypt\" => 1);\r\n$serverName = \"tcp:cikj0w7mbn.database.windows.net,1433\";
+		$conn = sqlsrv_connect($serverName, $connectionInfo);
+?>
