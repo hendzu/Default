@@ -4,7 +4,7 @@
         //$loginUrl = $helper->getLoginUrl();
         // Use the login url on a link or button to redirect to Facebook for authentication
 
-        //$helper = new FacebookRedirectLoginHelper();
+        $helper = new FacebookRedirectLoginHelper();
       /*try {
         $session = $helper->getSessionFromRedirect();
       } catch(FacebookRequestException $ex) {
