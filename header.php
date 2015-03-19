@@ -100,10 +100,8 @@
                     the JavaScript SDK to present a graphical Login button that triggers
                     the FB.login() function when clicked.
                   -->
-                <fb:login-button data-scope="public_profile,email" 
-                                 data-auto-logout-link="true" 
-                                 data-size="large"
-                                 onlogin="checkLoginState();">
-                </fb:login-button>
+                <div class="fb-login-button" data-max-rows="1" data-size="large"
+                     data-show-faces="false" data-auto-logout-link="true"
+                     data-onlogin="checkLoginStatus();"></div>
                 <div id="status">
                 </div>
