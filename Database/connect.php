@@ -1,9 +1,7 @@
 <?php
 
 try {
-	$conn = new PDO ( "sqlsrv:server = tcp:cikj0w7mbn.database.windows.net,1433; Database = defaultAndmebaas", "defaultkasutaja", "Isherenow0", array(
-    PDO::ATTR_PERSISTENT => true
-));
+	$conn = new PDO ( "sqlsrv:server = tcp:cikj0w7mbn.database.windows.net,1433; Database = defaultAndmebaas", "defaultkasutaja", "Isherenow0");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	}
     	catch ( PDOException $e ) {
