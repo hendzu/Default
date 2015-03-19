@@ -94,7 +94,16 @@
 			<a href="http://defaultvalimised.azurewebsites.net/kandideeri.php">Kandideeri</a>
 			<a href="http://defaultvalimised.azurewebsites.net/tulemused.php">Tulemused</a>
 		</p>
-                <div class="fb-login-button" data-max-rows="1" data-size="large"
-                     data-show-faces="false" data-auto-logout-link="true"></div>
+                
+                <!--
+                    Below we include the Login Button social plugin. This button uses
+                    the JavaScript SDK to present a graphical Login button that triggers
+                    the FB.login() function when clicked.
+                  -->
+                <fb:login-button data-scope="public_profile,email" 
+                                 data-auto-logout-link="true" 
+                                 data-size="large"
+                                 onlogin="checkLoginState();">
+                </fb:login-button>
                 <div id="status">
                 </div>
