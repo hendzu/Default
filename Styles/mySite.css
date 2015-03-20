@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-Mar-2015, 14:07:55
+    Author     : Diana
+*/
+
+#navBar {
+    height: 25px;
+    font-size: 20px;
+    font-family: Tahoma;
+    font-weight: bold;
+    text-align: center;
+    background-color: skyblue;
+        border-radius: 8px;
+}
+
+#navBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navBar li{
+    display: inline;
+    padding: 20px; 
+}
+
+#navBar a {
+    text-decoration: none;
+    color: #00F;
+    padding: 8px 8px 8px 8px;
+}
+
+#navBar a:hover {
+    color: #F90;
+    background-color: #FFF;
+}
+
+.fb-login-button {
+    float: right;
+}
