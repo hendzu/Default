@@ -12,9 +12,9 @@ group by parteid.nimi;";
 	
 	
     echo "<h3>Kandidaatide hulk piirkonna kaupa.</h3>";
-	$sql ="Select piirkonnad.ID, piirkonnad.Piirkond,count(*)
+	$sql ="Select piirkonnad.Piirkond,count(*)
 From kandidaadid join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id
-group by piirkonnad.ID, piirkonnad.Piirkond;";
+group by piirkonnad.Piirkond;";
     echo "<table>";
     echo "<tr><th>Piirkond</th><th>Kanidaatide arv</th></tr>";
     foreach ($conn->query($sql) as $row) {
