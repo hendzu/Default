@@ -4,7 +4,7 @@ require("connect.php");
 group by parteid.nimi;";
     echo "<h3>Valimistel osalevad parteid.</h3>";
     echo "<table>";
-    echo "<tr><th>Partei</th><th>Kanidaatide arv</th></tr>";
+    echo "<tr><th>Partei</th><th>Kandidaatide arv</th></tr>";
     foreach ($conn->query($sql) as $row) {
         echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
     }
@@ -16,7 +16,7 @@ group by parteid.nimi;";
 From kandidaadid join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id
 group by piirkonnad.Piirkond;";
     echo "<table>";
-    echo "<tr><th>Piirkond</th><th>Kanidaatide arv</th></tr>";
+    echo "<tr><th>Piirkond</th><th>Kandidaatide arv</th></tr>";
     foreach ($conn->query($sql) as $row) {
         echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
     }
