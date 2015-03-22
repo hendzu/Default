@@ -11,15 +11,11 @@
                         testAPI();
                       } else if (response.status === 'not_authorized') {
                         // The person is logged into Facebook, but not your app.
-                        document.getElementById('kandideeri').innerHTML = 'Kandideerimiseks ' +
-                                'peate olema sisse logitud.';
                         document.getElementById('status').innerHTML = 'Palun ' +
                           'logige siia lehele.';
                       } else {
                         // The person is not logged into Facebook, so we're not sure if
                         // they are logged into this app or not.
-                        document.getElementById('kandideeri').innerHTML = 'Kandideerimiseks ' +
-                                'peate olema sisse logitud.';
                         document.getElementById('status').innerHTML = 'Palun ' +
                           'logige Facebooki.';
                       }
@@ -83,8 +79,6 @@
                       console.log('Tere tulemast!  Ootame sinu andmeid.... ');
                       FB.api('/me', function(response) {
                         console.log('Edukas sisselogimine: ' + response.name);
-                        document.getElementById('kandideeri').innerHTML =
-                                'Saate kandideerida!';
                         document.getElementById('status').innerHTML =
                           'Olete sisse logitud, ' + response.name + '!';
                       });
