@@ -61,6 +61,12 @@
                             statusChangeCallback(response);
                         }
                     );
+            
+                    FB.Event.subscribe('auth.logout', function(response)
+                    {
+                        console.log("Auth.logout");
+                        statusChangeCallback(response);
+                    });
 
                     };
 
