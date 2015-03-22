@@ -1,4 +1,9 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8" />
+		<title>Default Valimised</title>
+		<?php 
         include("header.php");         
         //$helper = new FacebookRedirectLoginHelper('your redirect URL here');
         //$loginUrl = $helper->getLoginUrl();
