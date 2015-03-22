@@ -7,15 +7,19 @@
                       // Full docs on the response object can be found in the documentation
                       // for FB.getLoginStatus().
                       if (response.status === 'connected') {
-                        // Logged into your app and Facebook.
+                        LogitudKandideerima();
                         testAPI();
                       } else if (response.status === 'not_authorized') {
                         // The person is logged into Facebook, but not your app.
+                        document.getElementById('kandideeri').innerHTML = 'Kandideerimiseks' +
+                                'peate olema sisse logitud.';
                         document.getElementById('status').innerHTML = 'Palun ' +
                           'logige siia lehele.';
                       } else {
                         // The person is not logged into Facebook, so we're not sure if
                         // they are logged into this app or not.
+                        document.getElementById('kandideeri').innerHTML = 'Kandideerimiseks' +
+                                'peate olema sisse logitud.';
                         document.getElementById('status').innerHTML = 'Palun ' +
                           'logige Facebooki.';
                       }
@@ -61,12 +65,6 @@
                             statusChangeCallback(response);
                         }
                     );
-            
-                    /*FB.Event.subscribe('auth.logout', function(response)
-                    {
-                        console.log("Auth.logout");
-                        statusChangeCallback(response);
-                    });*/
 
                     };
 
