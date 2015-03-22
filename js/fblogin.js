@@ -55,14 +55,14 @@
                       statusChangeCallback(response);
                     });
                     
-                    FB.Event.subscribe('auth.login', function(r)
+                    FB.Event.subscribe('auth.login', function(response)
                         {
                             console.log(r.status);
 
                             if ( r.status === 'connected' )
                             {
                                 document.getElementById('status').innerHTML = 
-                                        'Olete sisse logitud, ' + r.name + '.';
+                                        'Olete sisse logitud, ' + response.name + '.';
                             }
                             else {
                                 document.getElementById('status').innerHTML =
