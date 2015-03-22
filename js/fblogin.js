@@ -57,17 +57,8 @@
                     
                     FB.Event.subscribe('auth.login', function(response)
                         {
-                            console.log(r.status);
-
-                            if ( r.status === 'connected' )
-                            {
-                                document.getElementById('status').innerHTML = 
-                                        'Olete sisse logitud, ' + response.name + '.';
-                            }
-                            else {
-                                document.getElementById('status').innerHTML =
-                                        'Te pole sisse logitud.';
-                            }
+                            console.log(response.status);
+                            statusChangeCallback(response);
                         }
                     );
 
