@@ -1,7 +1,7 @@
 <?php
 require("connect.php");
-    function kandideeri($nimi,$partei,$piirkond) {
-    $sql ="Insert into kandidaadid (Nimi, Partei_id,Piirkond_id)
-	values (".$nimi.",".$partei.",".$piirkond.");";
-	$conn->query($sql);
+function kandideeri($nimi,$partei,$piirkond,$conn) {
+    $sql ="Insert into kandidaadid (Nimi, Partei_id,Piirkond_id) values ('".$nimi."',".$partei.",".$piirkond.");";
+    $conn->query($sql);
+    }
 ?>
