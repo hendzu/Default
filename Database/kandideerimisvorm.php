@@ -18,5 +18,6 @@ require("connect.php");
     }
 	
     echo '<input type="submit" value="Kinnita"/>';
+    echo '</form>';
 require("disconnect.php");
 ?>
