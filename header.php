@@ -16,8 +16,7 @@
                         <li><a href="http://defaultvalimised.azurewebsites.net/kandideeri.php">Kandideeri</a></li>
                         <li><a href="http://defaultvalimised.azurewebsites.net/tulemused.php">Tulemused</a></li>
                         <li><div class="fb-login-button" data-max-rows="1" data-size="large"
-                     data-show-faces="false" data-auto-logout-link="true"
-                     data-onlogin="checkLoginStatus();"></div></li>
+                     data-show-faces="false" data-auto-logout-link="true"></div></li>
                     </ul>
                 </div>
 		

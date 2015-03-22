@@ -76,3 +76,16 @@
                           'Olete sisse logitud, ' + response.name + '!';
                       });
                     }
+                    
+                    FB.Event.subscribe('auth.login', function(r)
+                        {
+                            console.log(r.status);
+
+                            if ( r.status === 'connected' )
+                            {
+                                document.getElementById('status').innerHTML = 
+                                        'Olete sisse logitud, ' + r.name + '.';
+                            }
+                        }
+                    );
+            
