@@ -15,6 +15,6 @@ require("connect.php");
         echo '<input type="radio" name="piirkond" value='.$row[0].'checked>'.$row[1].'<br>';
     }
 	
-    echo '<input type="button" onclick="alert("Tere")" value="Kinnita"></form>';
+    echo '<input type="button" onclick="'."alert('Tere')".'" value="Kinnita"></form>';
 require("disconnect.php");
 ?>
