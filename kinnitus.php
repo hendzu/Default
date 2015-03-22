@@ -7,7 +7,7 @@
         include("header.php");
         require("Database/saatmisavaldus.php");
 		require("Database/disconnect.php");
-		kandideeri($_GET["nimi"],$_GET["partei"],$_GET["piirkond"])
+		kandideeri($_GET["nimi"],$_GET["partei"],$_GET["piirkond"]);
 ?>
 
   <h2>Teie avaldus on esitatud</h2>
