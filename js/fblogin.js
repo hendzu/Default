@@ -83,6 +83,8 @@
                       console.log('Tere tulemast!  Ootame sinu andmeid.... ');
                       FB.api('/me', function(response) {
                         console.log('Edukas sisselogimine: ' + response.name);
+                        document.getElementById('kandideeri').innerHTML =
+                                'Saate kandideerida';
                         document.getElementById('status').innerHTML =
                           'Olete sisse logitud, ' + response.name + '!';
                       });
