@@ -55,18 +55,18 @@
                       statusChangeCallback(response);
                     });
                     
-                    FB.Event.subscribe('auth.login', function(response)
+                    FB.Event.subscribe('auth.statusChange', function(response)
                         {
-                            console.log("Auth.login");
+                            console.log("Auth.statusChange");
                             statusChangeCallback(response);
                         }
                     );
             
-                    FB.Event.subscribe('auth.logout', function(response)
+                    /*FB.Event.subscribe('auth.logout', function(response)
                     {
                         console.log("Auth.logout");
                         statusChangeCallback(response);
-                    });
+                    });*/
 
                     };
 
