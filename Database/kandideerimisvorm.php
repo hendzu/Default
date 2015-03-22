@@ -1,8 +1,8 @@
 <?php
 require("connect.php");
 
-    echo '<form action="saadaavaldus.php">';
-	echo 'Nimi:<br>
+    echo '<form action="kinnitus.php">';
+	echo '<h3>Nimi</h3><br>
 <input type="text" name="nimi">';
     $sql ="Select ID, Nimi From parteid;";
     echo "<h3>Vali partei</h3>";
