@@ -2,7 +2,7 @@
 require("connect.php");
 
     echo '<form action="kinnitus.php">';
-	echo '<h3>Nimi</h3><br>
+	echo '<h3>Nimi</h3>
 <input type="text" name="nimi">';
     $sql ="Select ID, Nimi From parteid;";
     echo "<h3>Vali partei</h3>";

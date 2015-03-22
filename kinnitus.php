@@ -9,8 +9,7 @@
     
   <?php 
         require("Database/saatmisavaldus.php");
-		
-		require("Database/disconnect.php")
+		require("Database/disconnect.php");
 ?>
 
   <h2>Teie avaldus on esitatud</h2>
