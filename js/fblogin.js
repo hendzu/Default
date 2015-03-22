@@ -64,6 +64,10 @@
                                 document.getElementById('status').innerHTML = 
                                         'Olete sisse logitud, ' + r.name + '.';
                             }
+                            else {
+                                document.getElementById('status').innerHTML =
+                                        'Te pole sisse logitud.';
+                            }
                         }
                     );
 
