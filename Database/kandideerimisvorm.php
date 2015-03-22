@@ -2,6 +2,8 @@
 require("connect.php");
 
     echo "<form>";
+	echo 'Nimi:<br>
+<input type="text" name="nimi">';
     $sql ="Select ID, Nimi From parteid;";
     echo "<h3>Vali partei</h3>";
     foreach ($conn->query($sql) as $row) {
