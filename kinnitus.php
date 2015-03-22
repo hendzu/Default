@@ -4,12 +4,10 @@
         <meta charset="utf-8" />
 		<title>Default Valimised</title>
 		<?php 
-        include("header.php");         
-?>
-    
-  <?php 
+        include("header.php");
         require("Database/saatmisavaldus.php");
 		require("Database/disconnect.php");
+		kandideeri($_GET["nimi"],$_GET["partei"],$_GET["piirkond"])
 ?>
 
   <h2>Teie avaldus on esitatud</h2>

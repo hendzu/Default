@@ -1,7 +1,7 @@
 <?php
 require("connect.php");
 
-    echo '<form action="kinnitus.php">';
+    echo '<form action="kinnitus.php" method="get">';
 	echo '<h3>Nimi</h3>
 <input type="text" name="nimi">';
     $sql ="Select ID, Nimi From parteid;";
