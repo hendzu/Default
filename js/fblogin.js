@@ -57,7 +57,7 @@
                     
                     FB.Event.subscribe('auth.login', function(response)
                         {
-                            console.log(response.status);
+                            console.log("Auth.login");
                             statusChangeCallback(response);
                         }
                     );
