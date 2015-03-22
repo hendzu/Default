@@ -1,7 +1,7 @@
 <?php
 require("connect.php");
 
-    echo "<form>";
+    echo '<form action="saadaavaldus.php">';
 	echo 'Nimi:<br>
 <input type="text" name="nimi">';
     $sql ="Select ID, Nimi From parteid;";
@@ -17,6 +17,6 @@ require("connect.php");
         echo '<input type="radio" name="piirkond" value='.$row[0].'>'.$row[1].'<br>';
     }
 	
-    echo '<input type="button" onclick="'."alert('Tere')".'" value="Kinnita"></form>';
+    echo '<input type="submit" value="Kinnita"/>';
 require("disconnect.php");
 ?>
