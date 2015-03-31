@@ -43,3 +43,8 @@ and open the template in the editor.
 .fb-login-button {
     float: right;
 }
+
+#status {
+    color: blue;
+    float: right;
+}
