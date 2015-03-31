@@ -47,5 +47,5 @@ and open the template in the editor.
 #status {
     color: blue;
     float: right;
-    //background-color: skyblue;
+    font-family: Verdana;
 }
