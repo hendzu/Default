@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-        <meta charset="utf-8" />
-		<title>Default Valimised</title>
-		<?php 
+<?php 
         include("header.php");
         require("Database/saadaavaldus.php");
 		kandideeri($_GET["nimi"],$_GET["partei"],$_GET["piirkond"],$conn);

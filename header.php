@@ -1,4 +1,8 @@
-
+<!DOCTYPE html>
+<html lang="en" manifest="cache.appcache">
+	<head>
+        <meta charset="utf-8" />
+		<title>Default Valimised</title>
                 <script type="text/javascript" src="js/fblogin.js"></script>
                 <link rel="stylesheet" type="text/css" href="Styles/mySite.css">
         </head>
