@@ -1,9 +1,10 @@
 <?php
 require("connect.php");
-
+    
+    if (response.status == 'connected'){
     echo '<form action="kinnitus.php" method="get">';
-	echo '<h3>Nimi</h3>
-<input type="text" name="nimi">';
+        echo '<h3>Nimi</h3>
+<input type="text" name="nimi" value=response.name readonly>';
     $sql ="Select ID, Nimi From parteid;";
     echo "<h3>Vali partei</h3>";
     foreach ($conn->query($sql) as $row) {
@@ -19,5 +20,9 @@ require("connect.php");
 	
     echo '<input type="submit" value="Kinnita"/>';
     echo '</form>';
+    }
+    else {
+        echo '<p id="logisisse">Kandideerimiseks peate olema sisse logitud.</p>';
+    }
 require("disconnect.php");
 ?>
