@@ -19,7 +19,8 @@ xmlhttp.onreadystatechange=function()
 xmlhttp.open("GET",file,true);
 xmlhttp.send();
 }
-function lehevahetus(leht){
-ajax('sisu',leht+'.php');
-window.location.hash=leht;
+function lehevahetus(){
+    var leht = window.location.hash.replace("#", "") + ".php";
+ajax('sisu',leht);
 }
+window.onhashchange = lehevahetus;

@@ -3,7 +3,6 @@
 	<head>
         <meta charset="utf-8" />
 		<title>Default Valimised</title>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
                 <script type="text/javascript" src="js/fblogin.js"></script>
 				<script type="text/javascript" src="js/ajax.js"></script>
                 <link rel="stylesheet" type="text/css" href="Styles/mySite.css">
@@ -12,11 +11,11 @@
                 <div id="fb-root"></div>
                 <div id="navBar">
                     <ul>
-                        <li><button type="button" onclick="lehevahetus('Database/nimekiri')">Avaleht</button></li>
-                        <li><button type="button" onclick="lehevahetus('Database/nimekiri')">Hääleta</button></li>
-                        <li><button type="button" onclick="lehevahetus('Database/nimekiri')">Kandidaadid</button></li>
-                        <li><button type="button" onclick="lehevahetus('Database/kandideerimisvorm')">Kandideeri</button></li>
-                        <li><button type="button" onclick="lehevahetus('Database/stat')">Statistika</button></li>
+                        <li><a href="#Database/nimekiri">Avaleht</a></li>
+                        <li><a href="#Database/nimekiri">Hääleta</a></li>
+                        <li><a href="#Database/nimekiri">Kandidaadid</a></li>
+                        <li><a href="#Database/kandideerimisvorm">Kandideeri</a></li>
+                        <li><a href="#Database/stat">Statistika</a></li>
                         <li><div class="fb-login-button" data-max-rows="1" data-size="large"
                      data-show-faces="false" data-auto-logout-link="true"></div></li>
                     </ul>
