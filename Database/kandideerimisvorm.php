@@ -8,9 +8,17 @@ require("connect.php");
 use Facebook\FacebookRequest;
 use Facebook\GraphUser;
 use Facebook\FacebookRequestException;
+FacebookSession::setDefaultApplication('1386129771704789', '01ded0cb0e539b71f52a02c8df9533a7');
 
-if($session) {
-
+$helper = new FacebookJavaScriptLoginHelper();
+try {
+    $session = $helper->getSession();
+} catch(FacebookRequestException $ex) {
+    // When Facebook returns an error
+} catch(\Exception $ex) {
+    // When validation fails or other local issues
+}
+if ($session) {
   try {
 
     $user_profile = (new FacebookRequest(
