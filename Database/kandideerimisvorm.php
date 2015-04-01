@@ -10,7 +10,7 @@ use Facebook\FacebookRequest;
 use Facebook\GraphUser;
 use Facebook\FacebookRequestException;
 
-$session = FacebookSession::newAppSession();
+//$session = FacebookSession::newAppSession();
 
 try {
   $session->validate();
