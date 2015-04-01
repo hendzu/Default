@@ -5,6 +5,7 @@ require("connect.php");
     //scriptist on vaja saada response.status ja response.name, siis edasine
     //peaks töötama
     echo 'response.status';*/
+use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
 use Facebook\GraphUser;
 use Facebook\FacebookRequestException;
