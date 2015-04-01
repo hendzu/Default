@@ -12,7 +12,7 @@ use Facebook\FacebookRequestException;
 
 //$session = FacebookSession::newAppSession();
 
-try {
+/*try {
   $session->validate();
 } catch (FacebookRequestException $ex) {
   // Session not valid, Graph API returned an exception with the reason.
@@ -31,10 +31,10 @@ if($session) {
       $session, 'GET', '/me'
     ))->execute()->getGraphObject(GraphUser::className());
 
-    echo $name=$user_profile->getName();
+    echo $name=$user_profile->getName();*/
     /*
     echo "Name: " . $user_profile->getName();
-*/
+*//*
   } catch(FacebookRequestException $e) {
 
     echo "Exception occured, code: " . $e->getCode();
@@ -42,7 +42,7 @@ if($session) {
 
   }   
 
-}
+}*/
 echo '$session';
 if ($session){
     echo '<form action="kinnitus.php" method="get">';
