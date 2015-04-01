@@ -29,6 +29,7 @@ if($session) {
   }   
 
 }
+echo '$session';
 if ($session){
     echo '<form action="kinnitus.php" method="get">';
         echo '<h3>Nimi</h3>
