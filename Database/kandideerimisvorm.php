@@ -1,6 +1,7 @@
 <?php
 require("connect.php");
-    
+    echo '<script type="text/javascript" src="js/fblogin.js"></script>';
+    echo 'response.status';
     if (response.status == 'connected'){
     echo '<form action="kinnitus.php" method="get">';
         echo '<h3>Nimi</h3>
