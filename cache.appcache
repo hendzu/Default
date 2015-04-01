@@ -1,6 +1,0 @@
-CACHE MANIFEST
-htdocs/js/fblogin.js
-
-# All other resources (e.g. sites) require the user to be online. 
-NETWORK:
-*
