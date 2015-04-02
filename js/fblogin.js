@@ -81,6 +81,8 @@
                         console.log('Edukas sisselogimine: ' + response.name);
                         document.getElementById('status').innerHTML =
                           'Olete sisse logitud, ' + response.name + '!';
+                  
+                        console.log(JSON.stringify(response));
                       });
                       
                     }
