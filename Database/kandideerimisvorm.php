@@ -46,6 +46,7 @@ if($session) {
 
 }*/
 echo '$session';
+echo '<div id="test"><div>';
 echo '<div id ="kandideerimisvorm">';
     echo '<form action="kinnitus.php" method="get">';
         echo '<h3>Nimi</h3>

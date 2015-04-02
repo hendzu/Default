@@ -7,18 +7,19 @@
 
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
+        statusChangeCallback2(response);
     });
 }
 
 FB.Event.subscribe('auth.statusChange', function(response)
     {
         console.log("Auth.statusChange");
-        statusChangeCallback(response);
+        document.getElementById(test).innerHTML="jou";
+        statusChangeCallback2(response);
     }
 );
             
-function statusChangeCallback(response) {
+function statusChangeCallback2(response) {
     console.log('statusChangeCallback');
     console.log(response);
     // The response object is returned with a status field that lets the
@@ -27,7 +28,7 @@ function statusChangeCallback(response) {
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
         //Logged into Facebook;
-        testAPI();
+        testAPI2();
         } else if (response.status === 'not_authorized') {
         // The person is logged into Facebook, but not your app.
             document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">' .
@@ -39,7 +40,7 @@ function statusChangeCallback(response) {
                     'Kandideerimiseks peate olema sisse logitud!</p>';
         }
     }
-    function testAPI() {
+    function testAPI2() {
         console.log('Ootame sinu andmeid.... ');
         FB.api('/me', function(response) {
             console.log('Saime andmed: ' + response.name);
