@@ -1,16 +1,18 @@
 <?php
 
 require("connect.php");
-    /*echo '<script type="text/javascript" src="js/fblogin.js"></script>';
+    echo '<script type="text/javascript" src="js/kandideerimiseks.js"></script>';
     //scriptist on vaja saada response.status ja response.name, siis edasine
     //peaks töötama
-    echo 'response.status';*/
+    //echo 'response.status';
+/*
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
 use Facebook\GraphUser;
 use Facebook\FacebookRequestException;
+*/
 
-//$session = FacebookSession::newAppSession();
+//$session = FacebookSession::newFacebookSession(response);
 
 /*try {
   $session->validate();
@@ -44,10 +46,10 @@ if($session) {
 
 }*/
 echo '$session';
-if ($session){
+echo '<div id ="kandideerimisvorm">';
     echo '<form action="kinnitus.php" method="get">';
         echo '<h3>Nimi</h3>
-<input type="text" name="nimi" value=$name readonly>';
+<input id="namefield" type="text" name="nimi" readonly>';
     $sql ="Select ID, Nimi From parteid;";
     echo "<h3>Vali partei</h3>";
     foreach ($conn->query($sql) as $row) {
@@ -63,9 +65,10 @@ if ($session){
 	
     echo '<input type="submit" value="Kinnita"/>';
     echo '</form>';
-    }
+    echo '</div>';
+    /*}
     else {
         echo '<p id="logisisse">Kandideerimiseks peate olema sisse logitud.</p>';
-    }
+    }*/
 require("disconnect.php");
 ?>
