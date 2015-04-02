@@ -27,7 +27,7 @@ function statusChangeCallback(response) {
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
         //Logged into Facebook;
-        document.getElementById('namefield').value = response.name;
+        testAPI();
         } else if (response.status === 'not_authorized') {
         // The person is logged into Facebook, but not your app.
             document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">' .
@@ -38,4 +38,11 @@ function statusChangeCallback(response) {
             document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">' .
                     'Kandideerimiseks peate olema sisse logitud!</p>';
         }
+    }
+    function testAPI() {
+        console.log('Ootame sinu andmeid.... ');
+        FB.api('/me', function(response) {
+            console.log('Saime andmed: ' + response.name);
+            document.getElementById('namefield').value = response.name;
+        });
     }
