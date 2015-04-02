@@ -87,7 +87,7 @@
                         console.log('Saime andmed: ' + response.name);
                         document.getElementById('status').innerHTML =
                           'Olete sisse logitud, ' + response.name + '!';
-                        document.getElementById('namefield').value = response.name;
+                        document.getElementById('namefield').value = response.name.toString();
                       });
                       
                     }
