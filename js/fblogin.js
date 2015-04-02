@@ -13,15 +13,15 @@
                         // The person is logged into Facebook, but not your app.
                         document.getElementById('status').innerHTML = 'Palun ' +
                           'logige siia lehele.';
-                        document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">'+
-                          'Kandideerimiseks peate olema sisse logitud!</p>';
+                        //document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">'+
+                        //  'Kandideerimiseks peate olema sisse logitud!</p>';
                       } else {
                         // The person is not logged into Facebook, so we're not sure if
                         // they are logged into this app or not.
                         document.getElementById('status').innerHTML = 'Palun ' +
                           'logige Facebooki.';
-                        document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">'+
-                          'Kandideerimiseks peate olema sisse logitud!</p>';
+                        //document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">'+
+                        //  'Kandideerimiseks peate olema sisse logitud!</p>';
                       }
                     }
 
@@ -31,7 +31,7 @@
                     function checkLoginState() {
                       FB.getLoginStatus(function(response) {
                         statusChangeCallback(response);
-                        document.getElementById('test').innerHTML="jou";
+                        //document.getElementById('test').innerHTML="jou";
                       });
                     }
 
