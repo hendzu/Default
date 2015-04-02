@@ -4,7 +4,10 @@
         <meta charset="utf-8" />
 		<title>Default Valimised</title>
                 <script type="text/javascript" src="js/fblogin.js"></script>
+                <script type="text/javascript" src="js/kandideerimiseks.js"></script>
 				<script type="text/javascript" src="js/ajax.js"></script>
+                                
+                                
                 <link rel="stylesheet" type="text/css" href="Styles/mySite.css">
         </head>
 	<body>

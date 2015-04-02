@@ -1,7 +1,6 @@
 <?php
 
 require("connect.php");
-    echo '<script type="text/javascript" src="js/kandideerimiseks.js"></script>';
     //scriptist on vaja saada response.status ja response.name, siis edasine
     //peaks töötama
     //echo 'response.status';
