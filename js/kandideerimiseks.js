@@ -31,13 +31,11 @@ function statusChangeCallback2(response) {
         testAPI2();
         } else if (response.status === 'not_authorized') {
         // The person is logged into Facebook, but not your app.
-            document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">' .
-                    'Kandideerimiseks peate olema sisse logitud!</p>';
+            document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">Kandideerimiseks peate olema sisse logitud!</p>';
         } else {
             // The person is not logged into Facebook, so we're not sure if
             // they are logged into this app or not.
-            document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">' .
-                    'Kandideerimiseks peate olema sisse logitud!</p>';
+            document.getElementById('kandideerimisvorm').innerHTML = '<p id="logisisse">Kandideerimiseks peate olema sisse logitud!</p>';
         }
     }
     function testAPI2() {
