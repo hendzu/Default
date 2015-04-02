@@ -9,7 +9,6 @@
                       if (response.status === 'connected') {
                         //Logged into Facebook;
                         testAPI();
-                        testAPI2();
                       } else if (response.status === 'not_authorized') {
                         // The person is logged into Facebook, but not your app.
                         document.getElementById('status').innerHTML = 'Palun ' +
@@ -85,16 +84,10 @@
                       console.log('Tere tulemast!  Ootame sinu andmeid.... ');
                       FB.api('/me', function(response) {
                         console.log('Edukas sisselogimine: ' + response.name);
+                        console.log('Saime andmed: ' + response.name);
                         document.getElementById('status').innerHTML =
                           'Olete sisse logitud, ' + response.name + '!';
+                        document.getElementById('namefield').value = response.name;
                       });
                       
                     }
-
-    function testAPI2() {
-        console.log('Ootame sinu andmeid.... ');
-        FB.api('/me', function(response) {
-            console.log('Saime andmed: ' + response.name);
-            document.getElementById('namefield').value = response.name;
-        });
-    }

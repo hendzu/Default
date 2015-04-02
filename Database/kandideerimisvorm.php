@@ -49,7 +49,7 @@ echo '<div id="test"><div>';
 echo '<div id ="kandideerimisvorm">';
     echo '<form action="kinnitus.php" method="get">';
         echo '<h3>Nimi</h3>
-<input id="namefield" type="text" name="nimi" value="jura" readonly>';
+<input id="namefield" type="text" name="nimi" readonly>';
     $sql ="Select ID, Nimi From parteid;";
     echo "<h3>Vali partei</h3>";
     foreach ($conn->query($sql) as $row) {
