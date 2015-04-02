@@ -4,46 +4,7 @@ require("connect.php");
     //scriptist on vaja saada response.status ja response.name, siis edasine
     //peaks töötama
     //echo 'response.status';
-/*
-use Facebook\FacebookSession;
-use Facebook\FacebookRequest;
-use Facebook\GraphUser;
-use Facebook\FacebookRequestException;
-*/
-
-//$session = FacebookSession::newFacebookSession(response);
-
-/*try {
-  $session->validate();
-} catch (FacebookRequestException $ex) {
-  // Session not valid, Graph API returned an exception with the reason.
-  echo $ex->getMessage();
-} catch (\Exception $ex) {
-  // Graph API returned info, but it may mismatch the current app or have expired.
-  echo $ex->getMessage();
-}
-
-
-if($session) {
-
-  try {
-
-    $user_profile = (new FacebookRequest(
-      $session, 'GET', '/me'
-    ))->execute()->getGraphObject(GraphUser::className());
-
-    echo $name=$user_profile->getName();*/
-    /*
-    echo "Name: " . $user_profile->getName();
-*//*
-  } catch(FacebookRequestException $e) {
-
-    echo "Exception occured, code: " . $e->getCode();
-    echo " with message: " . $e->getMessage();
-
-  }   
-
-}*/
+echo '<script type="text/javascript" src="js/kandideerimiseks.js"></script>';
 echo '$session';
 echo '<div id="test"><div>';
 echo '<div id ="kandideerimisvorm">';
