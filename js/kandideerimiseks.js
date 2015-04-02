@@ -14,7 +14,7 @@ function checkLoginState() {
 FB.Event.subscribe('auth.statusChange', function(response)
     {
         console.log("Auth.statusChange");
-        document.getElementById(test).innerHTML="jou";
+        document.getElementById('test').innerHTML="jou";
         statusChangeCallback2(response);
     }
 );
