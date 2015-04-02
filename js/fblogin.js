@@ -1,11 +1,14 @@
 // This is called with the results from from FB.getLoginStatus().
+var response1;
+var response2;
                     function statusChangeCallback(response) {
                       console.log('statusChangeCallback');
-                      console.log(response);
+                      //console.log(response);
                       // The response object is returned with a status field that lets the
                       // app know the current login status of the person.
                       // Full docs on the response object can be found in the documentation
                       // for FB.getLoginStatus().
+                      response1 = response;
                       if (response.status === 'connected') {
                         //Logged into Facebook;
                         testAPI();
@@ -28,6 +31,7 @@
                       FB.getLoginStatus(function(response) {
                         statusChangeCallback(response);
                       });
+                      return [response1,response2];
                     }
 
                     window.fbAsyncInit = function() {
@@ -77,12 +81,12 @@
                     // successful.  See statusChangeCallback() for when this call is made.
                     function testAPI() {
                       console.log('Tere tulemast!  Ootame sinu andmeid.... ');
-                      FB.api('/me', function(response) {
-                        console.log('Edukas sisselogimine: ' + response.name);
-                        document.getElementById('status').innerHTML =
+                      FB.api('/me', function (response) {
+                          console.log('Edukas sisselogimine: ' + response.name);
+                          document.getElementById('status').innerHTML =
                           'Olete sisse logitud, ' + response.name + '!';
-                  
-                        console.log(JSON.stringify(response));
+                          response2 = response;
+                          //console.log(JSON.stringify(response));
                       });
                       
                     }

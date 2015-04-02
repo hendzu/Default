@@ -23,4 +23,13 @@ function lehevahetus(){
     var leht = window.location.hash.replace("#", "") + ".php";
 ajax('sisu',leht);
 }
+function kontroll(){
+    var leht="karu.txt";
+    console.log("Tere");
+    var responses  = checkLoginState();
+    
+    console.log(responses);
+
+ajax('sisu',leht);
+}
 window.onhashchange = lehevahetus;
