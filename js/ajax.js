@@ -32,4 +32,9 @@ function kontroll(){
 
 ajax('sisu',leht);
 }
+function lae() {
+    if (window.location.hash) {
+        lehevahetus();
+    }
+}
 window.onhashchange = lehevahetus;

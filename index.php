@@ -9,7 +9,7 @@
                                 
                 <link rel="stylesheet" type="text/css" href="Styles/mySite.css">
         </head>
-	<body>
+	<body onload=lae()>
                 <div id="fb-root"></div>
                 <div id="navBar">
                     <ul>
