@@ -20,17 +20,25 @@ xmlhttp.open("GET",file,true);
 xmlhttp.send();
 }
 function lehevahetus(){
-    var leht = window.location.hash.replace("#", "") + ".php";
-ajax('sisu',leht);
+    if (window.location.hash == "#Database/kandideerimisvorm") {
+        console.log(kontroll()[1]);
+        if (kontroll()[1] == "connected") {
+            ajax('sisu', "Database/kandideerimisvorm.php");
+        }
+        else {
+            ajax('sisu', "Database/reject.php");
+        }
+    }
+    else {
+        var leht = window.location.hash.replace("#", "") + ".php";
+        ajax('sisu', leht);
+    }
 }
 function kontroll(){
-    var leht="karu.txt";
-    console.log("Tere");
     var responses  = checkLoginState();
     
     console.log(responses);
-
-ajax('sisu',leht);
+    return [responses[0].status, responses[1].name];
 }
 function lae() {
     if (window.location.hash) {
