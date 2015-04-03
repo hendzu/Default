@@ -21,8 +21,8 @@ xmlhttp.send();
 }
 function lehevahetus(){
     if (window.location.hash == "#Database/kandideerimisvorm") {
-        console.log(kontroll()[1]);
-        if (kontroll()[1] == "connected") {
+        console.log(kontroll()[0]);
+        if (kontroll()[0] == "connected") {
             ajax('sisu', "Database/kandideerimisvorm.php");
         }
         else {
