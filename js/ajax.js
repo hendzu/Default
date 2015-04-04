@@ -31,13 +31,14 @@ function lehevahetus(){
     }
     else {
         var leht = window.location.hash.replace("#", "") + ".php";
+        console.log(leht);
         ajax('sisu', leht);
     }
 }
 function kontroll(){
     var responses  = checkLoginState();
     
-    console.log(responses);
+    //console.log(responses);
     return [responses[0].status, responses[1].name];
 }
 function lae() {
@@ -45,4 +46,36 @@ function lae() {
         lehevahetus();
     }
 }
+function nimi(fail) {
+    document.getElementById("n").defaultValue = kontroll()[1];
+}
+function submitForm(fail) {
+    nimi(fail);
+    $.ajax({type:'POST', url: fail, data:$('#vorm').serialize(), success: function(response) {
+        $('#vorm').find('.confirm').html(response);
+    }});
+
+    return false;
+}
+$("#ajaxform").submit(function(e)
+{
+	var postData = $(this).serializeArray();
+	var formURL = $(this).attr("action");
+	$.ajax(
+	{
+		url : formURL,
+		type: "POST",
+		data : postData,
+		success:function(data, textStatus, jqXHR) 
+		{
+
+		},
+		error: function(jqXHR, textStatus, errorThrown) 
+		{
+		}
+	});
+    e.preventDefault();	//STOP default action
+});
+	
+$("#ajaxform").submit(); //SUBMIT FORM
 window.onhashchange = lehevahetus;
