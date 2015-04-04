@@ -54,7 +54,7 @@ function submitForm(fail) {
     console.log("LOL");
     $.ajax({ type: 'POST', url: fail, data: $('#vorm').serialize(), success: function (response) {
         $('#vorm').find('.confirm').html(response);
-        console.log("LOL");
+        console.log("LOLlo");
     } 
     });
     console.log("IRV");
