@@ -20,10 +20,11 @@ xmlhttp.open("GET",file,true);
 xmlhttp.send();
 }
 function lehevahetus(){
-    if (window.location.hash == "#Database/kandideerimisvorm") {
+    if (window.location.hash == ("#Database/kandideerimisvorm"||"#Database/parteiavaldus")) {
         console.log(kontroll()[0]);
         if (kontroll()[0] == "connected") {
-            ajax('sisu', "Database/kandideerimisvorm.php");
+			var leht = window.location.hash.replace("#", "") + ".php";
+            ajax('sisu', leht);
         }
         else {
             ajax('sisu', "Database/reject.php");
