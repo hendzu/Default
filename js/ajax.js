@@ -38,12 +38,17 @@ function lehevahetus(){
 function kontroll(){
     var responses  = checkLoginState();
     
-    //console.log(responses);
+    console.log(responses);
     return [responses[0].status, responses[1].name];
 }
 function lae() {
     if (window.location.hash) {
-        lehevahetus();
+        try{
+            setTimeout(lehevahetus(),500);
+            }
+        catch(error){
+            lae();
+        }
     }
 }
 function nimi(fail) {
