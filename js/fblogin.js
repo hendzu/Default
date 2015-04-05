@@ -34,6 +34,29 @@ var response2;
                       return [response1,response2];
                     }
 
+                    // Load the SDK asynchronously
+                    (function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s); js.id = id;
+                      js.src = "//connect.facebook.net/et_EE/sdk.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+
+                    // Here we run a very simple test of the Graph API after login is
+                    // successful.  See statusChangeCallback() for when this call is made.
+                    function testAPI() {
+                      console.log('Tere tulemast!  Ootame sinu andmeid.... ');
+                      FB.api('/me', function (response) {
+                          console.log('Edukas sisselogimine: ' + response.name);
+                          document.getElementById('status').innerHTML =
+                          'Olete sisse logitud, ' + response.name + '!';
+                          response2 = response;
+                          //console.log(JSON.stringify(response));
+                      });
+                      
+                    }
+                    
                     window.fbAsyncInit = function() {
                     FB.init({
                       appId      : '1386129771704789',
@@ -67,27 +90,3 @@ var response2;
                     );
 
                     };
-
-                    // Load the SDK asynchronously
-                    (function(d, s, id) {
-                      var js, fjs = d.getElementsByTagName(s)[0];
-                      if (d.getElementById(id)) return;
-                      js = d.createElement(s); js.id = id;
-                      js.src = "//connect.facebook.net/et_EE/sdk.js";
-                      fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));
-
-                    // Here we run a very simple test of the Graph API after login is
-                    // successful.  See statusChangeCallback() for when this call is made.
-                    function testAPI() {
-                      console.log('Tere tulemast!  Ootame sinu andmeid.... ');
-                      FB.api('/me', function (response) {
-                          console.log('Edukas sisselogimine: ' + response.name);
-                          document.getElementById('status').innerHTML =
-                          'Olete sisse logitud, ' + response.name + '!';
-                          response2 = response;
-                          //console.log(JSON.stringify(response));
-                      });
-                      
-                    }
-                    
