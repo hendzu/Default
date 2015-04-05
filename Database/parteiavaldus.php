@@ -1,6 +1,6 @@
 <?php
 
-$fail="'loopartei.php'";
+$fail="'Database/loopartei.php'";
     echo '<form name="vorm" id="vorm" onsubmit="return submitForm('.$fail.');">';
 	echo "<h3>Vali partei nimi</h3>";
     echo '<input type="text" id="n" name="nimi" value="">';
