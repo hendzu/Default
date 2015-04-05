@@ -3,13 +3,14 @@
 	<head>
         <meta charset="utf-8" />
 		<title>Default Valimised</title>
+                <link rel="stylesheet" type="text/css" href="Styles/mySite.css">
                 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
                 <script type="text/javascript" src="js/fblogin.js"></script>
 				<script type="text/javascript" src="js/ajax.js"></script>
                 
                                 
                                 
-                <link rel="stylesheet" type="text/css" href="Styles/mySite.css">
+                
         </head>
 	<body onload=lae()>
                 <div id="fb-root"></div>
