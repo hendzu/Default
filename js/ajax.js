@@ -43,12 +43,14 @@ function kontroll(){
 }
 function lae() {
     if (window.location.hash) {
-        try{
-            setTimeout(lehevahetus(),500);
-            }
-        catch(error){
-            lae();
+        var ref = setInterval(function () {
+            try {
+                lehevahetus();
+                clearInterval(ref);
+            } catch (error) { }
         }
+            , 500);
+        
     }
 }
 function nimi(fail) {
