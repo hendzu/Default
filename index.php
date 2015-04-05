@@ -16,7 +16,7 @@
                 <div id="fb-root"></div>
                 <div id="navBar">
                     <ul>
-                        <li><a href="#Database/nimekiri">Avaleht</a></li>
+                        <li><a href="#avaleht">Avaleht</a></li>
                         <li><a href="#Database/haaleta">Hääleta</a></li>
                         <li><a href="#Database/nimekiri">Kandidaadid</a></li>
                         <li><a href="#Database/kandideerimisvorm">Kandideeri</a></li>
