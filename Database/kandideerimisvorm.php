@@ -2,7 +2,7 @@
 
 require("connect.php");
 $fail="'kinnitus.php'";
-    echo '<form name="ajaxform" id="ajaxform" action="kinnitus.php" method="post">';
+    echo '<form name="vorm" id="vorm" onsubmit="return submitForm('.$fail.');">';
     echo '<input type="text" id="n" name="nimi" value="" readonly hidden>';
     $sql ="Select ID, Nimi From parteid;";
     echo "<h3>Vali partei</h3>";
@@ -19,7 +19,8 @@ $fail="'kinnitus.php'";
     $div='confirm';
     $leht='kinnitus';
     echo '<input type="submit" name="submit" value="Kinnita" />';
-    echo '</form>';
+    
     echo"<div class='confirm'></div>";
+    echo '</form>';
 require("disconnect.php");
 ?>

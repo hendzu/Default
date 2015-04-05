@@ -51,35 +51,11 @@ function nimi(fail) {
 }
 function submitForm(fail) {
     nimi(fail);
-    console.log("LOL");
     $.ajax({ type: 'POST', url: fail, data: $('#vorm').serialize(), success: function (response) {
         $('#vorm').find('.confirm').html(response);
-        console.log("LOLlo");
+        console.log(response);
     } 
     });
-    console.log("IRV");
     return false;
-}
-/*$("#ajaxform").submit(function(e)
-{
-	var postData = $(this).serializeArray();
-	var formURL = $(this).attr("action");
-	$.ajax(
-	{
-		url : formURL,
-		type: "POST",
-		data : postData,
-		success:function(data, textStatus, jqXHR) 
-		{
-
-		},
-		error: function(jqXHR, textStatus, errorThrown) 
-		{
-		}
-	});
-    e.preventDefault();	//STOP default action
-});
-	
-$("#ajaxform").submit(); //SUBMIT FORM*/
 
 window.onhashchange = lehevahetus;
