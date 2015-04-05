@@ -53,6 +53,9 @@ function lae() {
             , 500);
         
     }
+	else{
+		ajax('sisu',"avaleht.php");
+	}
 }
 function nimi(fail) {
     document.getElementById("n").defaultValue = kontroll()[1];
