@@ -7,6 +7,7 @@
                 <script type="text/javascript" defer="defer" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
                 <script type="text/javascript" defer="defer" src="js/fblogin.js"></script>
                 <script type="text/javascript" src="js/ajax.js"></script>
+                <script type="text/javascript" src="js/Push.js"></script>
                 
                                 
                                 
@@ -34,6 +35,7 @@
                 
                 <div id="status">
                 </div>
+        <div id="push"></div>
     <div id="sisu">
     </div>
  </body>
