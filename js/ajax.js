@@ -20,7 +20,7 @@ xmlhttp.open("GET",file,true);
 xmlhttp.send();
 }
 function lehevahetus(){
-    if (window.location.hash == ("#Database/kandideerimisvorm"||"#Database/parteiavaldus")) {
+    if (window.location.hash == ("#Database/kandideerimisvorm"||"#Database/parteiavaldus"||"#Database/haaleta")) {
         console.log(kontroll()[0]);
         if (kontroll()[0] == "connected") {
 			var leht = window.location.hash.replace("#", "") + ".php";

@@ -9,7 +9,7 @@ $fail="'Database/haal.php'";
 From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id ;";
     echo "<h3>Vali partei</h3>";
     foreach ($conn->query($sql) as $row) {
-        echo '<input type="radio" id="p1" name="kandidaat" value='.$row[0].'>Nimi: '.$row[1].' Partei: '.$row[1].' Piirkond: '.$row[3].'<br>';
+        echo '<input type="radio" id="p1" name="kandidaat" value='.$row[0].'>ID: '.$row[0].' Nimi: '.$row[1].' Partei: '.$row[2].' Piirkond: '.$row[3].'<br>';
     }
     echo '<input type="submit" name="submit" value="Kinnita" />';
     
