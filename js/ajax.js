@@ -56,6 +56,6 @@ function submitForm(fail) {
         console.log(response);
     } 
     });
-    return false;
+return false;}
 
 window.onhashchange = lehevahetus;
