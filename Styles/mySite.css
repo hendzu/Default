@@ -53,3 +53,18 @@ and open the template in the editor.
 #logisisse {
     color: red;
 }
+
+h1 {
+    font-family: Tahoma;
+    color: darkblue;
+}
+
+#tekst {
+    font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
+}
+
+#push {
+    color: #939393;
+    font-family: Arial, 'Times New Roman';
+    font-style: italic;
+}
