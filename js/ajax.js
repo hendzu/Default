@@ -44,11 +44,19 @@ function kontroll(){
 }
 function lae() {
     if (window.location.hash) {
+        var i = 0;
         var ref = setInterval(function () {
+            console.log(i);
             try {
                 lehevahetus();
                 clearInterval(ref);
-            } catch (error) { }
+            } catch (error) {
+                i++;
+                if (i == 3) {
+                    clearInterval(ref);
+                    ajax('sisu', "Database/reject.php");
+                }
+            }
         }
             , 500);
         
