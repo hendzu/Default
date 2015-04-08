@@ -21,8 +21,8 @@ xmlhttp.send();
 }
 function lehevahetus(){
     if (window.location.hash == "#Database/haaleta"||window.location.hash == "#Database/kandideerimisvorm"||window.location.hash == "#Database/parteiavaldus") {
-        console.log(kontroll()[0]);
-        if (kontroll()[0] == "connected") {
+        console.log(kontroll());
+        if (kontroll() == "connected") {
 			var leht = window.location.hash.replace("#", "") + ".php";
             ajax('sisu', leht);
         }
@@ -40,7 +40,7 @@ function kontroll(){
     var responses  = checkLoginState();
     
     console.log(responses);
-    return [responses[0].status, responses[1].name];
+    return [responses.status];
 }
 function lae() {
     if (window.location.hash) {
@@ -58,7 +58,7 @@ function lae() {
 	}
 }
 function nimi(fail) {
-    document.getElementById("n").defaultValue = kontroll()[1];
+    document.getElementById("n").defaultValue = checkLoginState();
 }
 function submitForm(fail) {
     nimi(fail);
