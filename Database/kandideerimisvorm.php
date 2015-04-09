@@ -2,7 +2,7 @@
 
 require("connect.php");
 $fail="'kinnitus.php'";
-
+echo '<div id="vorm">';
     echo '<form name="vorm" id="vorm" onsubmit="return submitForm('.$fail.');">';
     echo '<input type="text" id="n" name="nimi" value="" readonly hidden>';
     $sql ="Select ID, Nimi From parteid;";
@@ -23,5 +23,6 @@ $fail="'kinnitus.php'";
     echo '</form>';
 	echo "<h3>Ei leia sobivat parteid? Loo uus!</h3>";
 	echo '<a href="#Database/parteiavaldus">Loo partei!</a>';
+    echo '</div>';
 require("disconnect.php");
 ?>

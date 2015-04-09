@@ -59,12 +59,30 @@ h1 {
     color: darkblue;
 }
 
-#tekst {
-    font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
+h3 {
+    font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, 
+        'Times New Roman', serif;
 }
 
+#error {
+    color: red;
+}
+
+#tekst {
+    font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, 
+        'Times New Roman', serif;
+}
+
+p {
+    font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, 
+        'Times New Roman', serif;
+}
 #push {
     color: #939393;
     font-family: Arial, 'Times New Roman';
     font-style: italic;
+}
+
+#vorm {
+    
 }
