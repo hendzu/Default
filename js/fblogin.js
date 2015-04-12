@@ -1,7 +1,7 @@
 var response1;
 var response2;
 function statusChangeCallback(response){
-    console.log('statusChangeCallback');
+    //console.log('statusChangeCallback');
     response1=response;
     if(response.status==='connected'){
         testAPI();
@@ -17,7 +17,7 @@ function checkLoginState(){
         statusChangeCallback(response);
     });
     return response1;
-}function checkLoginState(){
+}function checkName(){
 	return response2;
 }
 
@@ -33,7 +33,7 @@ window.fbAsyncInit=function(){
         statusChangeCallback(response);
     });
     FB.Event.subscribe('auth.statusChange',function(response) {
-        console.log("Auth.statusChange");
+        //console.log("Auth.statusChange");
         statusChangeCallback(response);
     });
 };
@@ -49,9 +49,9 @@ window.fbAsyncInit=function(){
 }(document,'script','facebook-jssdk'));
 
 function testAPI(){
-    console.log('Tere tulemast!  Ootame sinu andmeid.... ');
+    //console.log('Tere tulemast!  Ootame sinu andmeid.... ');
     FB.api('/me',function(response){
-        console.log('Edukas sisselogimine: '+response.name);
+        //console.log('Edukas sisselogimine: '+response.name);
         document.getElementById('status').innerHTML='Olete sisse logitud, '+
                 response.name+'!';response2=response;
     });

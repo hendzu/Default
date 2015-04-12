@@ -52,13 +52,13 @@ function lae() {
                 clearInterval(ref);
             } catch (error) {
                 i++;
-                if (i == 3) {
+                if (i == 2) {
                     clearInterval(ref);
                     ajax('sisu', "Database/reject.php");
                 }
             }
         }
-            , 500);
+            , 200);
         
     }
 	else{
@@ -66,7 +66,7 @@ function lae() {
 	}
 }
 function nimi(fail) {
-    document.getElementById("n").defaultValue = checkLoginState();
+    document.getElementById("n").defaultValue = checkName();
 }
 function submitForm(fail) {
     nimi(fail);
