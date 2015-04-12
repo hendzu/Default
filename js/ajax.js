@@ -52,7 +52,7 @@ function lae() {
                 clearInterval(ref);
             } catch (error) {
                 i++;
-                if (i == 3) {
+                if (i == 5) {
                     clearInterval(ref);
                     ajax('sisu', "Database/reject.php");
                 }
