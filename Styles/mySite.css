@@ -93,9 +93,9 @@ p {
     text-decoration: none;
     font-weight: bold;
     color: #F90;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #loopartei:hover {
-    color: chartreuse;
+    color: #448ccb;
 }
