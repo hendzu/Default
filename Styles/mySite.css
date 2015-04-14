@@ -89,8 +89,12 @@ p {
         'Times New Roman', serif;
 }
 
-#loopartei {
+#loopartei:visited, #loopartei {
     text-decoration: none;
     font-weight: bold;
     color: #F90;
+}
+
+#loopartei:hover {
+    color: chartreuse;
 }
