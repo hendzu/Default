@@ -22,7 +22,7 @@ echo '<div id="vorm">';
     echo"<div class='confirm'></div>";
     echo '</form>';
 	echo "<h3>Ei leia sobivat parteid? Loo uus!</h3>";
-	echo '<a href="#Database/parteiavaldus">Loo partei!</a>';
+	echo '<a id="loopartei" href="#Database/parteiavaldus">Loo partei!</a>';
     echo '</div>';
 require("disconnect.php");
 ?>

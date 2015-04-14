@@ -88,3 +88,8 @@ p {
     font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, 
         'Times New Roman', serif;
 }
+
+#loopartei {
+    text-decoration: none;
+    font-weight: bold;
+}
