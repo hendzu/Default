@@ -17,6 +17,7 @@ echo '<div id="vorm">';
     foreach ($conn->query($sql) as $row) {
         echo '<input type="radio" id="p2" name="piirkond" value='.$row[0].'>'.$row[1].'<br>';
     }
+    echo '<br>';
     echo '<input type="submit" name="submit" value="Kinnita" />';
     
     echo"<div class='confirm'></div>";
