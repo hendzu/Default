@@ -7,7 +7,7 @@
 if(typeof(localStorage) !== "undefined") {
     console.log("Storage defined");
     // Code for localStorage/sessionStorage.
-    if(document.forms != "undefined"){
+    if(document.forms["vorm"] != "undefined"){
         var radios = document.forms["vorm"].elements["partei"];
         for(var i = 0, max = radios.length; i < max; i++) {
             radios[i].onclick = function() {
