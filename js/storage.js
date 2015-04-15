@@ -43,5 +43,6 @@ if(typeof(localStorage) !== "undefined") {
     });
     
 } else {
+    console.log("Storage undefined");
     // Sorry! No Web Storage support..
 }
