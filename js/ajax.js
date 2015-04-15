@@ -25,6 +25,7 @@ function lehevahetus(){
         if (kontroll() == "connected") {
 			var leht = window.location.hash.replace("#", "") + ".php";
             ajax('sisu', leht);
+            store();
         }
         else {
             ajax('sisu', "Database/reject.php");
@@ -78,5 +79,50 @@ function submitForm(fail) {
     return false;
 }
 
+function store(){
+    if(typeof(localStorage) !== "undefined") {
+        console.log("Storage defined");
+        // Code for localStorage/sessionStorage.
+        if(document.forms["vorm"] != "undefined"){
+            var radios = document.forms["vorm"].elements["partei"];
+            for(var i = 0, max = radios.length; i < max; i++) {
+                radios[i].onclick = function() {
+                    localStorage.setItem('valitudpartei',this.value);
+                    console.log("valitud partei: " + this.value);
+                };
+            }
+            $(function() {
+            var $radios = $('input:radio[name=partei]');
+                if($radios.is(':checked') === false) {
+                    $selectedpartei = localStorage.getItem('valitudpartei');
+                    if($selectedpartei!=null){
+                        $radios.filter('[value='+$selectedpartei+']').prop('checked', true);
+                        console.log("varem valitud partei: "+ $selectedpartei);
+                    }
+                }
+            });
+            var radios2 = document.forms["vorm"].elements["piirkond"];
+            for(var i = 0, max = radios2.length; i < max; i++) {
+                radios2[i].onclick = function() {
+                    localStorage.setItem('valitudpiirkond',this.value);
+                    console.log("valitud piirkond: " + this.value);
+                };
+            }
+            $(function() {
+            var $radios2 = $('input:radio[name=piirkond]');
+                if($radios2.is(':checked') === false) {
+                    $selectedpiirkond = localStorage.getItem('valitudpiirkond');
+                    if($selectedpiirkond!=null){
+                        $radios2.filter('[value='+$selectedpiirkond+']').prop('checked', true);
+                        console.log("varem valitud piirkond: "+ $selectedpiirkond);
+                    }
+                }
+            });
+        }
+    } else {
+        console.log("Storage undefined");
+        // Sorry! No Web Storage support..
+    }
+}
 
 window.onhashchange = lehevahetus;

@@ -8,8 +8,6 @@
                 <script type="text/javascript" defer="defer" src="js/fblogin.js"></script>
                 <script type="text/javascript" src="js/ajax.js"></script>
                 <script type="text/javascript" src="js/Push.js"></script>
-                <script type="text/javascript" src="js/storage.js"></script>
-                
                 
                                 
                                 
