@@ -80,10 +80,10 @@ function submitForm(fail) {
 }
 
 function store(){
-    if(typeof(localStorage) != "undefined") {
+    if(typeof(localStorage) == true) {
         console.log("Storage defined");
         // Code for localStorage/sessionStorage.
-        if(document.forms["vorm"] != "undefined"){
+        if(document.forms["vorm"] == true){
             var radios = document.forms["vorm"].elements["partei"];
             for(var i = 0, max = radios.length; i < max; i++) {
                 radios[i].onclick = function() {
