@@ -80,7 +80,7 @@ function submitForm(fail) {
 }
 
 function store(){
-    if(typeof(localStorage) !== "undefined") {
+    if(typeof(localStorage) != "undefined") {
         console.log("Storage defined");
         // Code for localStorage/sessionStorage.
         if(document.forms["vorm"] != "undefined"){
