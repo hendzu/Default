@@ -18,6 +18,7 @@ xmlhttp.onreadystatechange=function()
   
 xmlhttp.open("GET",file,true);
 xmlhttp.send();
+store();
 }
 function lehevahetus(){
     if (window.location.hash == "#Database/haaleta"||window.location.hash == "#Database/kandideerimisvorm"||window.location.hash == "#Database/parteiavaldus") {
@@ -25,7 +26,7 @@ function lehevahetus(){
         if (kontroll() == "connected") {
 			var leht = window.location.hash.replace("#", "") + ".php";
             ajax('sisu', leht);
-            store();
+            //store();
         }
         else {
             ajax('sisu', "Database/reject.php");
