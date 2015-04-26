@@ -2,7 +2,7 @@
 
 require("connect.php");
 $fail="'kinnitus.php'";
-echo '<div id="vorm">';
+echo '<div id="kandideerimisvorm">';
     echo '<form name="vorm" id="vorm" onsubmit="return submitForm('.$fail.');">';
     echo '<input type="text" id="n" name="nimi" value="" readonly hidden>';
     $sql ="Select ID, Nimi From parteid;";
