@@ -84,8 +84,11 @@ function store(){
     //if(typeof(localStorage) == true) {
         console.log("Start storage");
         // Code for localStorage/sessionStorage.
-        //if(document.forms["vorm"] == true){
-            //console.log("forms[vorm] == true");
+        if(!document.forms["vorm"]){
+            console.log("!forms[vorm]");
+        }
+        else {
+            console.log("forms[vorm]");
             var radios = document.forms["vorm"].elements["partei"];
             for(var i = 0, max = radios.length; i < max; i++) {
                 radios[i].onclick = function() {
@@ -120,7 +123,7 @@ function store(){
                     }
                 }
             });
-        //}
+        }
         //else console.log("forms[vorm] !== true");
     /*} else {
         console.log("Storage undefined");
