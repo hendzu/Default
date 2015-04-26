@@ -18,7 +18,9 @@ xmlhttp.onreadystatechange=function()
   
 xmlhttp.open("GET",file,true);
 xmlhttp.send();
-store();
+setTimeout(function(){
+    store();
+}, 2000);
 }
 function lehevahetus(){
     if (window.location.hash == "#Database/haaleta"||window.location.hash == "#Database/kandideerimisvorm"||window.location.hash == "#Database/parteiavaldus") {
