@@ -81,8 +81,8 @@ function submitForm(fail) {
 }
 
 function store(){
-    if(typeof(localStorage) == true) {
-        console.log("Storage defined");
+    //if(typeof(localStorage) == true) {
+        console.log("Start storage");
         // Code for localStorage/sessionStorage.
         if(document.forms["vorm"] == true){
             var radios = document.forms["vorm"].elements["partei"];
@@ -120,10 +120,10 @@ function store(){
                 }
             });
         }
-    } else {
+    /*} else {
         console.log("Storage undefined");
         // Sorry! No Web Storage support..
-    }
+    }*/
 }
 
 window.onhashchange = lehevahetus;
