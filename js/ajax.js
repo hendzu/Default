@@ -20,7 +20,7 @@ xmlhttp.open("GET",file,true);
 xmlhttp.send();
 setTimeout(function(){
     store();
-}, 3000);
+}, 1000);
 }
 function lehevahetus(){
     if (window.location.hash == "#Database/haaleta"||window.location.hash == "#Database/kandideerimisvorm"||window.location.hash == "#Database/parteiavaldus") {
