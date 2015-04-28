@@ -6,13 +6,13 @@ require("connect.php");
     $conn->query($sql);
 	echo "<h2>Teie hääl on esitatud</h2>";
 	}
-	catch{
+	catch (Exception $e) {
 		$sql ="Update haaled set Kandidaat_id='".$_POST['kandidaat']."' where Isik='".$_POST['nimi']."';";
     $conn->query($sql);
 	echo "<h2>Teie hääl on muudetud</h2>";
 	}
 	}
-	catch{
+	catch (Exception $e) {
 		echo "<h2>Teie häält ei olnud võimalik esitada</h2>";
 	}
 

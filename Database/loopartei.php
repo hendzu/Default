@@ -5,7 +5,7 @@ require("connect.php");
     $conn->query($sql);
 	echo "<h2>Teie avaldus on esitatud</h2>";
 }
-catch{
+catch (Exception $e) {
 	echo "<h2>Teie avalduse esitamine ei õnnestunud.</h2>";
 }
 require("disconnect.php");
