@@ -6,7 +6,7 @@ try{try{
     $conn->query($sql);
 echo "<h2>Teie avaldus on esitatud</h2>";}
 catch (Exception $e) {
-	$sql ="Update haaled set Partei_id='".$_POST['partei']."',Piirkond_id='".$_POST['piirkond']."' where Nimi='".$_POST['nimi']."';";
+	$sql ="Update kandidaadid set Partei_id='".$_POST['partei']."' , Piirkond_id='".$_POST['piirkond']."' where Nimi='".$_POST['nimi']."';";
     $conn->query($sql);
 echo "<h2>Teie kanidatuur on muudetud</h2>";}
 	
