@@ -71,6 +71,7 @@ function lae() {
 }
 function nimi(fail) {
     document.getElementById("n").defaultValue = checkName();
+	console.log(checkName());
 }
 function submitForm(fail) {
     nimi(fail);
