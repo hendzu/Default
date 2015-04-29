@@ -1,11 +1,13 @@
 <?php 
 require("connect.php");
-
-if($_SERVER['REQUEST_METHOD'] == "POST"){ 
+	try{
     $sql ="Insert into parteid (Nimi) values ('".$_POST['nimi']."');";
     $conn->query($sql);
-
-
-require("disconnect.php");}
+	echo "<h2>Teie avaldus on esitatud</h2>";
+}
+catch (Exception $e) {
+	echo "<h2>Teie avalduse esitamine ei õnnestunud.</h2>";
+}
+require("disconnect.php");
 ?>
-  <h2>Teie avaldus on esitatud</h2>
+  

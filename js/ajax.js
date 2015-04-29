@@ -56,7 +56,7 @@ function lae() {
                 clearInterval(ref);
             } catch (error) {
                 i++;
-                if (i == 2) {
+                if (i == 3) {
                     clearInterval(ref);
                     ajax('sisu', "Database/reject.php");
                 }
@@ -71,6 +71,7 @@ function lae() {
 }
 function nimi(fail) {
     document.getElementById("n").defaultValue = checkName();
+	console.log(checkName());
 }
 function submitForm(fail) {
     nimi(fail);
