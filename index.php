@@ -44,6 +44,9 @@
                      data-show-faces="false" data-auto-logout-link="true"></div></li>
                         </ul>
                     </div>
+                </nav>
+            </div>
+                    
         <!-- Vana navBar
             <div id="navBar">
                     <ul>
