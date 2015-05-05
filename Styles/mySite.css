@@ -44,6 +44,11 @@ and open the template in the editor.
     float: right;
 }
 */
+
+#sisu {
+    padding-left: 20px;
+}
+
 #status {
     color: blue;
     float: right;
