@@ -39,11 +39,14 @@ and open the template in the editor.
     color: #F90;
     background-color: #FFF;
 }
+*/
 
 .fb-login-button {
-    float: right;
+    //float: right;
+    padding-right: 10px;
+    padding-top: 10px;
 }
-*/
+
 
 #sisu {
     padding-left: 20px;
@@ -53,6 +56,7 @@ and open the template in the editor.
     color: blue;
     float: right;
     font-family: Verdana;
+    padding-right: 10px;
 }
 
 #logisisse {
@@ -87,6 +91,7 @@ p {
     color: #939393;
     font-family: Arial, 'Times New Roman';
     font-style: italic;
+    padding-left: 10px;
 }
 
 #kandideerimisvorm, #haaletamisvorm{
