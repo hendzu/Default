@@ -29,12 +29,11 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="#" class="navbar-brand">Default Valimised</a>
+                        <a href="#avaleht" class="navbar-brand">Default Valimised</a>
                     </div>
                     <!-- Collection of nav links and other content for toggling -->
                     <div id="navbarCollapse" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#avaleht">Avaleht</a></li>
                             <li><a href="#Database/haaleta">Hääleta</a></li>
                             <li><a href="#Database/nimekiri">Kandidaadid</a></li>
                             <li><a href="#Database/kandideerimisvorm">Kandideeri</a></li>
