@@ -43,14 +43,13 @@ and open the template in the editor.
 
 .fb-login-button {
     //float: right;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-left: 10px;
+    padding: 15px;
 }
 
 
 #sisu {
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 #status {
@@ -58,6 +57,7 @@ and open the template in the editor.
     float: right;
     font-family: Verdana;
     padding-right: 10px;
+    padding-left: 10px;
 }
 
 #logisisse {
@@ -93,6 +93,7 @@ p {
     font-family: Arial, 'Times New Roman';
     font-style: italic;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 #kandideerimisvorm, #haaletamisvorm{
