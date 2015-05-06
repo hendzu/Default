@@ -18,7 +18,7 @@ function checkLoginState(){
     });
     return response1;
 }function checkName(){
-	return response2;
+	return response2.name;
 }
 
 window.fbAsyncInit=function(){
