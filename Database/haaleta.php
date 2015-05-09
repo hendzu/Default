@@ -3,7 +3,7 @@
 require("connect.php");
 $fail="'Database/haal.php'";
 
-    echo '<form name="haaletamisvorm" id="haaletamisvorm" onsubmit="return submitForm('.$fail.');">';
+    echo '<form name="vorm" id="vorm" onsubmit="return submitForm('.$fail.');">';
     echo '<input type="text" id="n" name="nimi" value="" readonly hidden>';
     $sql ="Select kandidaadid.ID, kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond
 From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id ;";
