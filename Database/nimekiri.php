@@ -10,5 +10,22 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
     }
 	
     echo "</table>";
+    echo "<h3>Otsi kandidaate</h3>";
+    ?>
+    <form action="action_page.php">
+        Nimi:<br>
+        <input type="text" name="nimi" value="Mari Maasikas">
+        <br>
+        Partei:<br>
+        <input type="text" name="partei" value="Eestimaa Rohelised">
+        <br>
+        Piirkond:<br>
+        <input type="text" name="piirkond" value="Kodu">
+        <br><br>
+        <input type="submit" value="Otsi">
+    </form> 
+
+
+<?php>
 require("disconnect.php");
 ?>
