@@ -14,13 +14,13 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
     ?>
     <form action="action_page.php">
         Nimi:<br>
-        <input type="text" name="nimi" value="Mari Maasikas">
+        <input type="text" name="nimi">
         <br>
         Partei:<br>
-        <input type="text" name="partei" value="Eestimaa Rohelised">
+        <input type="text" name="partei">
         <br>
         Piirkond:<br>
-        <input type="text" name="piirkond" value="Kodu">
+        <input type="text" name="piirkond">
         <br><br>
         <input type="submit" value="Otsi">
     </form> 
