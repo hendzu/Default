@@ -35,7 +35,17 @@ group by kandidaadid.nimi;";
     echo "</table>";
     ?>
 <h3>Häälte jagunemine kogu riigis</h3>
-
+<?php
+    $sql ="Select kandidaadid.Nimi, count(*) From haaled´join kandidaadid on 
+        haaled.kandidaat_id=kandidaadid.id JOIN parteid ON parteid.id=kandidaadid.partei_id 
+        group by kandidaadid.id;";
+    echo "<table>";
+    echo "<tr><th>Kandidaat</th><th>Hääli</th></tr>";
+    foreach ($conn->query($sql) as $row) {
+        echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
+    }
+    echo "</table>";
+?>
 
 <h3>Häälte jagunemine piirkondade lõikes</h3>
 <h3>Häälte jagunemine parteide lõikes</h3>
