@@ -111,3 +111,12 @@ p {
 #loopartei:hover {
     color: #448ccb;
 }
+
+table, td, th {
+    border: 1px solid;
+}
+
+th {
+    background-color: blue;
+    color: white;
+}
