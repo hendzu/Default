@@ -22,17 +22,6 @@ group by piirkonnad.Piirkond;";
     }
 	
     echo "</table>";
-	echo "<h3>Enim hääli kogunud.</h3>";
-	$sql ="Select kandidaadid.Nimi,count(*)
-From kandidaadid join Haaled on kandidaadid.id=haaled.kandidaat_id
-group by kandidaadid.nimi;";
-    echo "<table>";
-    echo "<tr><th>Kandidaat</th><th>Häälte arv</th></tr>";
-    foreach ($conn->query($sql) as $row) {
-        echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
-    }
-	
-    echo "</table>";
     ?>
 <h3>Häälte jagunemine kogu riigis</h3>
 <?php
