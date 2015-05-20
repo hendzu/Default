@@ -2,6 +2,7 @@
 require("connect.php");
     $sql ="Select parteid.Nimi,count(*) From kandidaadid join parteid on kandidaadid.partei_id=parteid.id
 group by parteid.nimi;";
+    echo "<div id=\"tabelid\">";
     echo "<h3>Valimistel osalevad parteid.</h3>";
     echo "<table>";
     echo "<tr><th>Partei</th><th>Kandidaatide arv</th></tr>";
@@ -73,5 +74,6 @@ group by piirkonnad.Piirkond;";
 ?>
 <h3>Häälte jagunemine konkreetsete kandidaatide lõikes</h3>
 <?php
+echo "</div>";
 require("disconnect.php");
 ?>

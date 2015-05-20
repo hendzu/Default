@@ -112,15 +112,15 @@ p {
     color: #448ccb;
 }
 
-table, td, th {
+#tabelid.table, #tabelid.td, #tabelid.th {
     border: 1px solid #4A91CE;
 }
 
-th {
+#tabelid.th {
     background-color: #4A91CE;
     color: white;
 }
-td {
+#tabelid.td {
     padding-left: 15px;
     padding-right: 15px;
 }
