@@ -33,5 +33,11 @@ group by kandidaadid.nimi;";
     }
 	
     echo "</table>";
+    ?>
+<h3>Häälte jagunemine kogu riigis</h3>
+<h3>Häälte jagunemine piirkondade lõikes</h3>
+<h3>Häälte jagunemine parteide lõikes</h3>
+<h3>Häälte jagunemine konkreetsete kandidaatide lõikes</h3>
+<?php
 require("disconnect.php");
 ?>
