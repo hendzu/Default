@@ -40,7 +40,8 @@ group by kandidaadid.nimi;";
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
     join haaled on haaled.kandidaat_id=kandidaadid.id
-    group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond;";
+    group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
+    ORDER BY count(*) DESC;";
     
     echo "<table>";
     echo "<tr><th>Kandidaat</th><th>Partei</th><th>Piirkond</th><th>Hääled</th></tr>";
