@@ -68,6 +68,20 @@ group by kandidaadid.nimi;";
     echo "</table>";
 ?>
 <h3>Häälte jagunemine parteide lõikes</h3>
+<?php
+    $sql ="Select parteid.Nimi, count(*)
+    From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
+    join haaled on haaled.kandidaat_id=kandidaadid.id
+    group by parteid.Nimi
+    ORDER BY count(*) DESC;";
+    
+    echo "<table>";
+    echo "<tr><th>Partei</th><th>Hääled</th></tr>";
+    foreach ($conn->query($sql) as $row) {
+        echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
+    }
+    echo "</table>";
+?>
 <h3>Häälte jagunemine konkreetsete kandidaatide lõikes</h3>
 <?php
 require("disconnect.php");
