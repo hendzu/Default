@@ -36,9 +36,10 @@ group by kandidaadid.nimi;";
     ?>
 <h3>Häälte jagunemine kogu riigis</h3>
 <?php
-    $sql ="Select kandidaadid.Nimi, count(*) From haaled join kandidaadid on 
-        haaled.kandidaat_id=kandidaadid.id JOIN parteid ON parteid.id=kandidaadid.partei_id 
-        group by kandidaadid.id;";
+    $sql ="Select kandidaadid.Nimi,count(*) 
+        From haaled join kandidaadid on haaled.kandidaat_id=kandidaadid.id 
+        join parteid on parteid.id=kandidaadid.partei_id 
+        group by kandidaadid.nimi;";
     echo "<table>";
     echo "<tr><th>Kandidaat</th><th>Hääli</th></tr>";
     foreach ($conn->query($sql) as $row) {
