@@ -7,16 +7,19 @@ echo '<div id="kandideerimisvorm">';
     echo '<input type="text" id="n" name="nimi" value="" readonly hidden>';
     $sql ="Select ID, Nimi From parteid;";
     echo "<h3>Vali partei</h3>";
+    echo "<div id=\"valik\">";
     foreach ($conn->query($sql) as $row) {
         echo '<input type="radio" id="p1" name="partei" value='.$row[0].'>'.$row[1].'<br>';
     }
 	
-	
+    echo "</div>";
     echo "<h3>Vali piirkond</h3>";
+    echo "<div id=\"valik\">";
 	$sql ="Select ID,Piirkond From piirkonnad;";
     foreach ($conn->query($sql) as $row) {
         echo '<input type="radio" id="p2" name="piirkond" value='.$row[0].'>'.$row[1].'<br>';
     }
+    echo "</div>";
     echo '<br>';
     echo '<input type="submit" name="submit" value="Kinnita" />';
     
