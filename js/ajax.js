@@ -66,6 +66,7 @@ function lae() {
         
     }
 	else{
+                window.href="#avaleht";
 		ajax('sisu',"avaleht.php");
 	}
 }
