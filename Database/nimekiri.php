@@ -1,5 +1,6 @@
 <?php
 require("connect.php");
+    $fail="'Database/otsing.php'";
     $sql ="Select kandidaadid.ID, kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond
 From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id ;";
     echo '<meta charset="utf-8" />';
@@ -15,7 +16,7 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
     echo "</div>";
     echo "<h3>Otsi kandidaate</h3>";
     ?>
-    <form action="action_page.php">
+    <form name="search" id="search" onsubmit="return submitSearch(.$fail.);">
         Nimi:<br>
         <input type="text" name="nimi">
         <br>
@@ -26,6 +27,8 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
         <input type="text" name="piirkond">
         <br><br>
         <input type="submit" value="Otsi">
+        
+        <div class="searchresult"></div>
     </form> 
 
 

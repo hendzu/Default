@@ -83,6 +83,18 @@ function submitForm(fail) {
     });
     return false;
 }
+
+function submitSearch(fail) {
+    nimi(fail);
+    $.ajax({ type: 'POST', url: fail, data: $('#search').serialize(), success: 
+                function (response) {
+        $('#search').find('.searchresult').html(response);
+        console.log(response);
+    } 
+    });
+    return false;
+}
+
 /*
 function tyhista(fail){
     nimi(fail);
