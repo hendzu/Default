@@ -1,8 +1,14 @@
 <?php 
 require("connect.php");
-$nimi=$_POST['name'];
-$partei=$_POST['partei'];
-$piirkond=$_POST['piirkond'];
+if($_POST['name'] != null){
+$nimi=$_POST['name'];} else 
+{$nimi="";}
+if($_POST['partei'] != null){
+$partei=$_POST['partei'];} else
+{$partei="";}
+if($_POST['piirkond'] != null){
+$piirkond=$_POST['piirkond'];} else
+{$piirkond="";}
 
 try{
     $sql ="Select kandidaadid.ID, kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond
