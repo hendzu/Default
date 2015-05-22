@@ -29,26 +29,15 @@ group by piirkonnad.Piirkond;";
     echo '<h3>Hääli saanud kandidaadid</h3>';
     //kaks dropdowni 'piirkond' ja 'partei'
     echo 'Piirkond:';
-    echo '<select id="valik1piirkond" name="cscf[piirkond1]">';
+    echo '<select id="valik1piirkond" name="valik1[piirkond]">';
     echo '<option value="koik">Kõik</option>';
     foreach ($conn->query($sqlpiirkonnad) as $row) {
         echo '<option value='.$row[0].'>'.$row[0].'</option>';
     }
     echo '</select>';
     echo '<input type="hidden" name="piirkond1" id="piirkond1_hidden">';
-echo'<div class="control-group">
-    <label class="control-label" for="Country">Country :</label>
-    <div class="controls">
-        <select id="itemType_id" name="cscf[country]" class="input-xlarge">
-            <option value="malaysia@email.com">Malaysia</option>
-            <option value="indonesia@email.com">Indonesia</option> 
-        </select>   
-        <span class="help-inline"></span>
-    </div>  
-</div>';
-if ($cscf['country']) echo'olemas'.$cscf['country']; else echo 'ei leia';
-    $piirkond1=$cscf['piirkond1'];
-    echo 'Valitud '.$piirkond1;
+    $piirkond1=$valik1['piirkond'];
+    if ($piirkond1) echo 'Valitud: '.$piirkond1; else echo 'ei leia valitut';
     $sql3 ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
