@@ -29,7 +29,7 @@ group by piirkonnad.Piirkond;";
     echo '<h3>Hääli saanud kandidaadid</h3>';
     //kaks dropdowni 'piirkond' ja 'partei'
     echo 'Piirkond:';
-    echo '<select id="valik1piirkond" name="valik1[piirkond]">';
+    echo '<select id="valik1piirkond" name="cscf[piirkond1]">';
     echo '<option value="koik">Kõik</option>';
     foreach ($conn->query($sqlpiirkonnad) as $row) {
         echo '<option value='.$row[0].'>'.$row[0].'</option>';
@@ -37,7 +37,7 @@ group by piirkonnad.Piirkond;";
     echo '</select>';
     echo '<input type="hidden" name="piirkond1" id="piirkond1_hidden">';
 
-    $piirkond1=$valik1['piirkond'];
+    $piirkond1=$cscf['piirkond1'];
     echo 'Valitud '.$piirkond1;
     $sql3 ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
