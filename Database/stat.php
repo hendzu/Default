@@ -29,14 +29,14 @@ group by piirkonnad.Piirkond;";
     echo '<h3>Hääli saanud kandidaadid</h3>';
     //kaks dropdowni 'piirkond' ja 'partei'
     echo 'Piirkond:';
-    echo '<select id="valik1piirkond" name="valik1[piirkond]">';
+    echo '<select id="valik1piirkond" name="valik1piirkond">';
     echo '<option value="koik">Kõik</option>';
     foreach ($conn->query($sqlpiirkonnad) as $row) {
         echo '<option value='.$row[0].'>'.$row[0].'</option>';
     }
     echo '</select>';
     echo '<input type="hidden" name="piirkond1" id="piirkond1_hidden">';
-    $piirkond1=$valik1['piirkond'];
+    $piirkond1=$_POST['valik1piirkond'];
     if ($piirkond1) echo 'Valitud: '.$piirkond1; else echo 'ei leia valitut';
     $sql3 ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
