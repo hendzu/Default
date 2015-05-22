@@ -16,7 +16,7 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
     echo "</div>";
     echo "<h3>Otsi kandidaate</h3>";
     ?>
-    <form name="search" id="search" onsubmit="return submitSearch(.$fail.);">
+    <form name="otsing" id="otsing" onsubmit="return submitSearch(.$fail.);">
         Nimi:<br>
         <input type="text" name="nimi">
         <br>

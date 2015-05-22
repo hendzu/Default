@@ -86,9 +86,9 @@ function submitForm(fail) {
 
 function submitSearch(fail) {
     nimi(fail);
-    $.ajax({ type: 'POST', url: fail, data: $('#search').serialize(), success: 
+    $.ajax({ type: 'POST', url: fail, data: $('#otsing').serialize(), success: 
                 function (response) {
-        $('#search').find('.searchresult').html(response);
+        $('#otsing').find('.searchresult').html(response);
         console.log(response);
     } 
     });
