@@ -94,6 +94,28 @@ function submitSearch(fail) {
     return false;
 }
 
+function submitTable1(fail) {
+    $.ajax({ type: 'POST', url: fail, data: $('#tabel1').serialize(), success: 
+                function (response) {
+        $('#tabel1').find('.confirm').html(response);
+        console.log(response);
+    } 
+    });
+    return false;
+}
+
+function submitTable2(fail) {
+    $.ajax({ type: 'POST', url: fail, data: $('#otsing').serialize(), success: 
+                function (response) {
+        $('#otsing').find('.confirm').html(response);
+        console.log(response);
+    } 
+    });
+    return false;
+}
+
+
+
 $(document).ready(function() {
     $("#valik1piirkond").change(function(){
       $("#piirkond1_hidden").val(("#valik1piirkond").find(":selected").text());

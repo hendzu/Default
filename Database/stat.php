@@ -26,34 +26,26 @@ group by piirkonnad.Piirkond;";
     }
     echo "</table>";
     
+    $fail1 = "'Database/tabel1.php'";
+    echo '<form name="tabel1" id="tabel1" onsubmit="return submitTable1('.$fail1.');">';
     echo '<h3>Hääli saanud kandidaadid</h3>';
-    //kaks dropdowni 'piirkond' ja 'partei'
     echo 'Piirkond:';
-    echo '<select id="valik1piirkond" name="valik1piirkond">';
+    echo '<select id="p" name="valik1piirkond">';
     echo '<option value="koik">Kõik</option>';
     foreach ($conn->query($sqlpiirkonnad) as $row) {
         echo '<option value='.$row[0].'>'.$row[0].'</option>';
     }
     echo '</select>';
-    echo '<input type="hidden" name="piirkond1" id="piirkond1_hidden">';
-    if($_POST['submit'])
-    {
-       $piirkond2=$_POST['valik1piirkond'];
+    echo 'Partei:';
+    echo '<select id="valik1partei" name="valik1partei">';
+    echo '<option value="koik">Kõik</option>';
+    foreach ($conn->query($sqlparteid) as $row) {
+        echo '<option value='.$row[0].'>'.$row[0].'</option>';
     }
-    //$piirkond1=$_POST['valik1piirkond'];
-    if ($piirkond2) echo 'Valitud: '.$piirkond2; else echo 'ei leia valitut';
-    $sql3 ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
-    From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
-    join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
-    join haaled on haaled.kandidaat_id=kandidaadid.id
-    group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
-    ORDER BY count(*) DESC;";
-    echo "<table>";
-    echo "<tr><th>Kandidaat</th><th>Partei</th><th>Piirkond</th><th>Hääled</th></tr>";
-    foreach ($conn->query($sql3) as $row) {
-        echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr>";
-    }
-    echo "</table>";
+    echo '</select>';
+    echo '<input type="submit" name="submit" value="Kuva">';
+    echo'<div class="confirm"></div>';
+    echo '</form>';
 
     echo'<h3>Häälte jagunemine piirkondade lõikes</h3>';
     $sql4 ="Select piirkonnad.Piirkond, count(*)
