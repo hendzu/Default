@@ -46,7 +46,7 @@ echo'<div class="control-group">
         <span class="help-inline"></span>
     </div>  
 </div>';
-echo $cscf['country'];
+if ($cscf['country']) echo'olemas'.$cscf['country']; else echo 'ei leia';
     $piirkond1=$cscf['piirkond1'];
     echo 'Valitud '.$piirkond1;
     $sql3 ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
