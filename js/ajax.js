@@ -109,7 +109,7 @@ function submitTable2(fail) {
                 function (response) {
         $('#tabel2').find('.confirm').html(response);
         console.log(response);
-    } 
+    }
     });
     return false;
 }

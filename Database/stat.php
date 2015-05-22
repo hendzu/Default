@@ -61,20 +61,20 @@ group by piirkonnad.Piirkond;";
     echo'<div class="confirm"></div>';
     echo '</form>';
     
-    echo'<h3>Häälte jagunemine parteide lõikes</h3>';
-    $sql5 ="Select parteid.Nimi, count(*)
+    echo'<h3>Hääletamine piirkonniti</h3>';
+    $sql5 ="Select piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join haaled on haaled.kandidaat_id=kandidaadid.id
-    group by parteid.Nimi
+    join piirkonnad on piirkonnad.id=kandidaadid.piirkond_id
+    group by piirkonnad.Piirkond
     ORDER BY count(*) DESC;";
     echo "<table>";
-    echo "<tr><th>Partei</th><th>Hääled</th></tr>";
+    echo "<tr><th>Piirkond</th><th>Hääli</th></tr>";
     foreach ($conn->query($sql5) as $row) {
         echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
     }
     echo "</table>";
     
-    echo '<h3>Häälte jagunemine konkreetsete kandidaatide lõikes</h3>';
     echo "</div>";
 require("disconnect.php");
 ?>
