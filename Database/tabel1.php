@@ -4,7 +4,7 @@ $partei=$_POST['valitudpartei'];
 $piirkond=$_POST['valitudpiirkond'];
 
 try{
-    echo $_POST['valitudpiirkond'];
+    echo $_POST['valitudpartei'];
     /*if(!$partei.equals('koik') && !$piirkond.equals('koik')){
         echo '1';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
