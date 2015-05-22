@@ -49,6 +49,7 @@ try{
 }
 catch (Exception $e) {
     echo "Tabelit ei olnud võimalik kuvada.";
+    echo $e;
 }
 
 require("disconnect.php");
