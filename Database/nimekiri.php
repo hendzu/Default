@@ -14,9 +14,10 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
 	
     echo "</table>";
     echo "</div>";
-    echo "<h3>Otsi kandidaate</h3>";
     
     echo'<form name="otsing" id="otsing" onsubmit="return submitSearch('.$fail.');">';
+    echo'<div class="confirm"></div>';
+    echo "<h3>Otsi kandidaate</h3>";
     echo 'Nimi:<br>';
         echo'<input type="text" name="nimi">';
         echo'<br>';
@@ -28,7 +29,6 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
         echo'<br><br>';
         echo'<input type="submit" name="submit" value="Otsi">';
         
-        echo'<div class="confirm"></div>';
     echo'</form> ';
 
 require("disconnect.php");
