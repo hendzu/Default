@@ -36,8 +36,12 @@ group by piirkonnad.Piirkond;";
     }
     echo '</select>';
     echo '<input type="hidden" name="piirkond1" id="piirkond1_hidden">';
-    $piirkond1=$_GET['valik1piirkond'];
-    if ($piirkond1) echo 'Valitud: '.$piirkond1; else echo 'ei leia ikka valitut';
+    if($_POST['submit'])
+    {
+       $piirkond2=$_POST['valik1piirkond'];
+    }
+    //$piirkond1=$_POST['valik1piirkond'];
+    if ($piirkond2) echo 'Valitud: '.$piirkond2; else echo 'ei leia valitut';
     $sql3 ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
