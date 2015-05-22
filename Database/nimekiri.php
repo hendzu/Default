@@ -15,23 +15,21 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
     echo "</table>";
     echo "</div>";
     echo "<h3>Otsi kandidaate</h3>";
-    ?>
-    <form name="otsing" id="otsing" onsubmit="return submitSearch('.$fail.');">
-        Nimi:<br>
-        <input type="text" name="nimi">
-        <br>
-        Partei:<br>
-        <input type="text" name="partei">
-        <br>
-        Piirkond:<br>
-        <input type="text" name="piirkond">
-        <br><br>
-        <input type="submit" name="submit" value="Otsi">
+    
+    echo'<form name="otsing" id="otsing" onsubmit="return submitSearch('.$fail.');">';
+    echo 'Nimi:<br>';
+        echo'<input type="text" name="nimi">';
+        echo'<br>';
+        echo'Partei:<br>';
+        echo'<input type="text" name="partei">';
+        echo'<br>';
+        echo'Piirkond:<br>';
+        echo'<input type="text" name="piirkond">';
+        echo'<br><br>';
+        echo'<input type="submit" name="submit" value="Otsi">';
         
-        <div class="confirm"></div>
-    </form> 
+        echo'<div class="confirm"></div>';
+    echo'</form> ';
 
-
-<?php>
 require("disconnect.php");
 ?>
