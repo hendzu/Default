@@ -36,7 +36,17 @@ group by piirkonnad.Piirkond;";
     }
     echo '</select>';
     echo '<input type="hidden" name="piirkond1" id="piirkond1_hidden">';
-
+echo'<div class="control-group">
+    <label class="control-label" for="Country">Country :</label>
+    <div class="controls">
+        <select id="itemType_id" name="cscf[country]" class="input-xlarge">
+            <option value="malaysia@email.com">Malaysia</option>
+            <option value="indonesia@email.com">Indonesia</option> 
+        </select>   
+        <span class="help-inline"></span>
+    </div>  
+</div>';
+echo $cscf['country'];
     $piirkond1=$cscf['piirkond1'];
     echo 'Valitud '.$piirkond1;
     $sql3 ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
