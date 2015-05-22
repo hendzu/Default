@@ -83,7 +83,17 @@ function submitForm(fail) {
     });
     return false;
 }
-
+/*
+function tyhista(fail){
+    nimi(fail);
+    $.ajax({ type: 'POST', url: fail, data: $('#vorm').serialize(), success: function (response) {
+            $('#vorm').find('.confirm').html(response);
+            console.log(response);
+        }
+    });
+    return false;
+}
+*/
 function store(){
     //if(typeof(localStorage) == true) {
         console.log("Start storage");

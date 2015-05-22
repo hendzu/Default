@@ -4,6 +4,7 @@ require("connect.php");
 $fail="'Database/haal.php'";
 
     echo '<form name="vorm" id="vorm" onsubmit="return submitForm('.$fail.');">';
+    echo"<div class='confirm'></div>";
     echo '<input type="text" id="n" name="nimi" value="" readonly hidden>';
     $sql ="Select kandidaadid.ID, kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond
 From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id ;";
@@ -17,8 +18,6 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
     echo "</table>";
     echo "</div>";
     echo '<input type="submit" name="submit" value="Kinnita" />';
-    
-    echo"<div class='confirm'></div>";
     echo '</form>';
 require("disconnect.php");
 ?>
