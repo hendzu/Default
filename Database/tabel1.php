@@ -1,6 +1,6 @@
 <?php 
 require("connect.php");
-$partei=$_POST['valitudpartei1'];
+$partei=$_POST['valitudpartei'];
 $piirkond=$_POST['valitudpiirkond'];
 
 try{

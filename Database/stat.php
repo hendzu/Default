@@ -30,14 +30,14 @@ group by piirkonnad.Piirkond;";
     echo '<form name="tabel1" id="tabel1" onsubmit="return submitTable1('.$fail1.');">';
     echo '<h3>Hääli saanud kandidaadid</h3>';
     echo 'Piirkond:';
-    echo '<select id="p" name="valik1piirkond">';
+    echo '<select id="valitudpiirkond" name="valitudpiirkond">';
     echo '<option value="koik">Kõik</option>';
     foreach ($conn->query($sqlpiirkonnad) as $row) {
         echo '<option value='.$row[0].'>'.$row[0].'</option>';
     }
     echo '</select>';
     echo 'Partei:';
-    echo '<select id="valik1partei" name="valik1partei">';
+    echo '<select id="valitudpartei" name="valitudpartei">';
     echo '<option value="koik">Kõik</option>';
     foreach ($conn->query($sqlparteid) as $row) {
         echo '<option value='.$row[0].'>'.$row[0].'</option>';
