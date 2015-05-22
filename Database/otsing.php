@@ -1,7 +1,7 @@
 <?php 
 require("connect.php");
-if($_POST['name'] != null){
-$nimi=$_POST['name'];} else 
+if($_POST['nimi'] != null){
+$nimi=$_POST['nimi'];} else 
 {$nimi="";}
 if($_POST['partei'] != null){
 $partei=$_POST['partei'];} else
