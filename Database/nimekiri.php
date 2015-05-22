@@ -26,7 +26,7 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
         Piirkond:<br>
         <input type="text" name="piirkond">
         <br><br>
-        <input type="submit" value="Otsi">
+        <input type="submit" name="submit" value="Otsi">
         
         <div class="searchresult"></div>
     </form> 
