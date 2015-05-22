@@ -105,9 +105,9 @@ function submitTable1(fail) {
 }
 
 function submitTable2(fail) {
-    $.ajax({ type: 'POST', url: fail, data: $('#otsing').serialize(), success: 
+    $.ajax({ type: 'POST', url: fail, data: $('#tabel2').serialize(), success: 
                 function (response) {
-        $('#otsing').find('.confirm').html(response);
+        $('#tabel2').find('.confirm').html(response);
         console.log(response);
     } 
     });

@@ -47,19 +47,19 @@ group by piirkonnad.Piirkond;";
     echo'<div class="confirm"></div>';
     echo '</form>';
 
-    echo'<h3>Häälte jagunemine piirkondade lõikes</h3>';
-    $sql4 ="Select piirkonnad.Piirkond, count(*)
-    From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
-    join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
-    join haaled on haaled.kandidaat_id=kandidaadid.id
-    group by piirkonnad.Piirkond
-    ORDER BY count(*) DESC;";
-    echo "<table>";
-    echo "<tr><th>Piirkond</th><th>Hääled</th></tr>";
-    foreach ($conn->query($sql4) as $row) {
-        echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
+    $fail1 = "'Database/tabel2.php'";
+    echo '<form name="tabel2" id="tabel2" onsubmit="return submitTable2('.$fail1.');">';
+    echo '<h3>Hääli saanud parteid</h3>';
+    echo 'Piirkond:';
+    echo '<select id="valitudpiirkond" name="valitudpiirkond">';
+    echo '<option value="koik">Kõik</option>';
+    foreach ($conn->query($sqlpiirkonnad) as $row) {
+        echo '<option value="'.$row[0].'">'.$row[0].'</option>';
     }
-    echo "</table>";
+    echo '</select>';
+    echo '<input type="submit" name="submit" value="Kuva">';
+    echo'<div class="confirm"></div>';
+    echo '</form>';
     
     echo'<h3>Häälte jagunemine parteide lõikes</h3>';
     $sql5 ="Select parteid.Nimi, count(*)
