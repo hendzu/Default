@@ -37,7 +37,7 @@ group by piirkonnad.Piirkond;";
     echo '</select>';
     echo '<input type="hidden" name="piirkond1" id="piirkond1_hidden">';
 
-    $piirkond1=$_POST["piirkond1"];
+    $piirkond1=$valik1['piirkond'];
     echo 'Valitud '.$piirkond1;
     $sql3 ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
