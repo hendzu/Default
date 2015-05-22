@@ -4,15 +4,8 @@ $partei=$_POST['valitudpartei1'];
 $piirkond=$_POST['valitudpiirkond'];
 
 try{
-    if($partei!='koik' && $piirkond != 'koik'){
-    $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
-    From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
-    join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
-    join haaled on haaled.kandidaat_id=kandidaadid.id
-    where parteid.Nimi=".$partei." and piirkonnad.Piirkond=".$piirkond."
-    group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
-    ORDER BY count(*) DESC;";}
-    else if($partei=='koik' && $piirkond =='koik'){
+    if($partei=='koik' && $piirkond =='koik'){
+        echo '1';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
@@ -20,6 +13,7 @@ try{
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
     else if($partei=='koik'){
+        echo '2';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
@@ -27,12 +21,22 @@ try{
     where piirkonnad.Piirkond=".$piirkond."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
-    else {
+    else if($piirkond=='koik'){
+        echo '3';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
     join haaled on haaled.kandidaat_id=kandidaadid.id
     where parteid.Nimi=".$partei."
+    group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
+    ORDER BY count(*) DESC;";}
+    else {
+        echo '4';
+    $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
+    From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
+    join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
+    join haaled on haaled.kandidaat_id=kandidaadid.id
+    where parteid.Nimi=".$partei." and piirkonnad.Piirkond=".$piirkond."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
     echo "<table>";
@@ -43,7 +47,7 @@ try{
     echo "</table>";
 }
 catch (Exception $e) {
-    echo "<h3>Tabelit ei olnud võimalik kuvada.</h3>";
+    echo "Tabelit ei olnud võimalik kuvada.";
 }
 
 require("disconnect.php");
