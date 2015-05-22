@@ -5,7 +5,7 @@ $piirkond=$_POST['valitudpiirkond'];
 
 try{
     echo $partei.", ".$piirkond;
-    if(!$partei.equals('koik') && !$piirkond.equals('koik')){
+    /*if(!$partei.equals('koik') && !$piirkond.equals('koik')){
         echo '1';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
@@ -46,7 +46,7 @@ try{
     foreach ($conn->query($sql) as $row) {
         echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr>";
     }
-    echo "</table>";
+    echo "</table>";*/
 }
 catch (Exception $e) {
     echo "Tabelit ei olnud võimalik kuvada.";
