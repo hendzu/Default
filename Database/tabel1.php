@@ -4,7 +4,7 @@ $partei=$_POST['valitudpartei1'];
 $piirkond=$_POST['valitudpiirkond'];
 
 try{
-    if($partei=='kõik' && $piirkond =='kõik'){
+    if($partei.equals('koik') && $piirkond.equals('koik')){
         echo '1';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
@@ -12,7 +12,7 @@ try{
     join haaled on haaled.kandidaat_id=kandidaadid.id
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
-    else if($partei=='kõik'){
+    else if($partei.equals('koik')){
         echo '2';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
@@ -21,7 +21,7 @@ try{
     where piirkonnad.Piirkond=".$piirkond."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
-    else if($piirkond=='kõik'){
+    else if($piirkond.equals('koik')){
         echo '3';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
