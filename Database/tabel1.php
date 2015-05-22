@@ -4,15 +4,17 @@ $partei=$_POST['valitudpartei1'];
 $piirkond=$_POST['valitudpiirkond'];
 
 try{
-    if($partei.equals('koik') && $piirkond.equals('koik')){
+    echo $partei.", ".$piirkond;
+    if(!$partei.equals('koik') && !$piirkond.equals('koik')){
         echo '1';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
     join haaled on haaled.kandidaat_id=kandidaadid.id
+    where parteid.Nimi=".$partei." and piirkonnad.Piirkond=".$piirkond."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
-    else if($partei.equals('koik')){
+    else if($partei.equals('koik') && !$piirkond.equals('koik')){
         echo '2';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
@@ -21,7 +23,7 @@ try{
     where piirkonnad.Piirkond=".$piirkond."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
-    else if($piirkond.equals('koik')){
+    else if($piirkond.equals('koik') && !$partei.equals('koik')){
         echo '3';
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
@@ -36,9 +38,9 @@ try{
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
     join haaled on haaled.kandidaat_id=kandidaadid.id
-    where parteid.Nimi=".$partei." and piirkonnad.Piirkond=".$piirkond."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
+    
     echo "<table>";
     echo "<tr><th>Kandidaat</th><th>Partei</th><th>Piirkond</th><th>Hääled</th></tr>";
     foreach ($conn->query($sql) as $row) {
