@@ -28,7 +28,7 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
         <br><br>
         <input type="submit" name="submit" value="Otsi">
         
-        <div class="searchresult"></div>
+        <div class="confirm"></div>
     </form> 
 
 
