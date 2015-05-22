@@ -10,7 +10,7 @@ try{
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
     join haaled on haaled.kandidaat_id=kandidaadid.id
-    where parteid.Nimi=".$partei." and piirkonnad.Piirkond=".$piirkond."
+    where parteid.Nimi like ".$partei." and piirkonnad.Piirkond like ".$piirkond."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
     else if($partei=='koik' && $piirkond!='koik'){
@@ -19,7 +19,7 @@ try{
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
     join haaled on haaled.kandidaat_id=kandidaadid.id
-    where piirkonnad.Piirkond=".$piirkond."
+    where piirkonnad.Piirkond like ".$piirkond."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
     else if($piirkond=='koik' && $partei!='koik'){
@@ -28,7 +28,7 @@ try{
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
     join haaled on haaled.kandidaat_id=kandidaadid.id
-    where parteid.Nimi=".$partei."
+    where parteid.Nimi like ".$partei."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
     else {
