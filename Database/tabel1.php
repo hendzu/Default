@@ -4,7 +4,7 @@ $partei=$_POST['valitudpartei'];
 $piirkond=$_POST['valitudpiirkond'];
 
 try{
-    if(!$partei.equals('koik') && !$piirkond.equals('koik')){
+    if($partei!='koik' && $piirkond!='koik'){
         echo '1';
     /*$sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
@@ -13,7 +13,7 @@ try{
     where parteid.Nimi=".$partei." and piirkonnad.Piirkond=".$piirkond."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";*/}
-    else if($partei.equals('koik') && !$piirkond.equals('koik')){
+    else if($partei=='koik' && $piirkond!='koik'){
         echo '2';
     /*$sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
@@ -22,7 +22,7 @@ try{
     where piirkonnad.Piirkond=".$piirkond."
     group by kandidaadid.nimi, parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";*/}
-    else if($piirkond.equals('koik') && !$partei.equals('koik')){
+    else if($piirkond=='koik' && $partei!='koik'){
         echo '3';/*
     $sql ="Select kandidaadid.Nimi, parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
