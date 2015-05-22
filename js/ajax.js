@@ -94,6 +94,12 @@ function submitSearch(fail) {
     return false;
 }
 
+$(document).ready(function() {
+    $("#valik1piirkond").change(function(){
+      $("#piirkond1_hidden").val(("#valik1piirkond").find(":selected").text());
+    });
+  });
+
 /*
 function tyhista(fail){
     nimi(fail);
