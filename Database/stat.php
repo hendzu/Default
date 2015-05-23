@@ -47,8 +47,8 @@ group by piirkonnad.Piirkond;";
     echo'<div class="confirm"></div>';
     echo '</form>';
 
-    $fail1 = "'Database/tabel2.php'";
-    echo '<form name="tabel2" id="tabel2" onsubmit="return submitTable2('.$fail1.');">';
+    $fail2 = "'Database/tabel2.php'";
+    echo '<form name="tabel2" id="tabel2" onsubmit="return submitTable2('.$fail2.');">';
     echo '<h3>Hääli saanud parteid</h3>';
     echo 'Piirkond:';
     echo '<select id="valitudpiirkond" name="valitudpiirkond">';

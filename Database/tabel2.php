@@ -16,7 +16,7 @@ try{
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
     join haaled on haaled.kandidaat_id=kandidaadid.id
-    group by parteid.Nimi
+    group by parteid.Nimi, piirkonnad.Piirkond
     ORDER BY count(*) DESC;";}
     
     echo "<table>";
