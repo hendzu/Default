@@ -1,5 +1,6 @@
 <?php 
 require("connect.php");
+    echo "nimi:".$_POST['nimi'];
 	try{
 		try{
     $sql ="Insert into haaled (Isik,Kandidaat_id) values ('".$_POST['nimi']."',".$_POST['kandidaat'].");";
