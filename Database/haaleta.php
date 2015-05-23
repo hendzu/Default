@@ -21,6 +21,7 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
     echo '<input type="submit" name="submit" value="Kinnita" />';
     echo '</form>';
     echo '<form name="tyhista" id="tyhista" onsubmit="return submitTyhista('.$fail2.');">';
+    echo '<input type="text" id="n" name="nimi" value="" readonly hidden>';
     echo "<div class='confirm'></div>";
     echo '<input type="submit" name="submit" value="Tühista oma hääl" />';
     echo '</form>';
