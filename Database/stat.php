@@ -52,7 +52,7 @@ group by piirkonnad.Piirkond;";
     echo '<h3>Hääli saanud parteid</h3>';
     echo 'Piirkond:';
     echo '<select id="valitudpiirkond" name="valitudpiirkond">';
-    echo '<option value="koik">Kõik</option>';
+    echo '<option value="1">Kõik</option>';
     foreach ($conn->query($sqlpiirkonnad) as $row) {
         echo '<option value="'.$row[0].'">'.$row[0].'</option>';
     }
