@@ -48,16 +48,16 @@ group by piirkonnad.Piirkond;";
     echo '</form>';
 
     echo '<h3>Hääli saanud parteid</h3>';
-    $sql3 ="Select parteid.Nimi, piirkonnad.Piirkond, count(*)
+    $sql3 ="Select parteid.Nimi, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
     join haaled on haaled.kandidaat_id=kandidaadid.id
-    group by parteid.Nimi, piirkonnad.Piirkond
+    group by parteid.Nimi
     ORDER BY count(*) DESC;";
     echo "<table>";
-    echo "<tr><th>Partei</th><th>Piirkond</th><th>Hääled</th></tr>";
+    echo "<tr><th>Partei</th><th>Hääled</th></tr>";
     foreach ($conn->query($sql3) as $row) {
-        echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td></tr>";
+        echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
     }
     echo "</table>";
     
