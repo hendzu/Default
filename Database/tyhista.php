@@ -1,6 +1,7 @@
 <?php 
 require("connect.php");
 	try{
+            echo $_POST['nimi'];
             $sql = "DELETE FROM Haaled WHERE isik='".$_POST['nimi']."';";
             $conn->query($sql);
             echo "<h2>Teie hääl on tühistatud</h2>";
