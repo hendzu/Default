@@ -10,7 +10,7 @@ try{
     where piirkonnad.Piirkond='".$piirkond."'
     group by parteid.Nimi
     ORDER BY count(*) DESC;";
-    
+    echo "<p>Piirkond: ".$piirkond."</p>";
     echo "<table>";
     echo "<tr><th>Partei</th><th>Hääled</th></tr>";
     foreach ($conn->query($sql) as $row) {
