@@ -86,8 +86,8 @@ function submitForm(fail) {
 
 function submitTyhista(fail) {
     nimi(fail);
-    $.ajax({ type: 'POST', url: fail, data: $('#tyhista').serialize(), success: function (response) {
-        $('#tyhista').find('.confirm').html(response);
+    $.ajax({ type: 'POST', url: fail, data: $('#vorm').serialize(), success: function (response) {
+        $('#vorm').find('.confirm').html(response);
         console.log(response);
     } 
     });
