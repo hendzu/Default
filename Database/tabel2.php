@@ -3,7 +3,7 @@ require("connect.php");
 $piirkond=$_POST['valitudpiirkond'];
 
 try{
-    if(piirkond=="1"){
+    if(piirkond==1){
     $sql ="Select parteid.Nimi, piirkonnad.Piirkond, count(*)
     From kandidaadid join parteid on kandidaadid.partei_id=parteid.id 
     join piirkonnad on kandidaadid.piirkond_id=piirkonnad.id 
