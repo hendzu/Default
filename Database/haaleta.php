@@ -2,6 +2,7 @@
 
 require("connect.php");
 $fail="'Database/haal.php'";
+$fail2="'Database/tyhista.php'";
 
     echo '<form name="vorm" id="vorm" onsubmit="return submitForm('.$fail.');">';
     echo"<div class='confirm'></div>";
@@ -18,6 +19,10 @@ From kandidaadid join parteid on kandidaadid.partei_id=parteid.id join piirkonna
     echo "</table>";
     echo "</div>";
     echo '<input type="submit" name="submit" value="Kinnita" />';
+    echo '</form>';
+    echo '<form name="tyhista" id="tyhista" onsubmit="return submitTyhista('.$fail2.');">';
+    echo "<div class='confirm'></div>";
+    echo '<input type="submit" name="submit" value="Tühista oma hääl" />';
     echo '</form>';
 require("disconnect.php");
 ?>
