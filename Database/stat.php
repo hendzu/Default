@@ -56,7 +56,7 @@ group by piirkonnad.Piirkond;";
     ORDER BY count(*) DESC;";
     echo "<table>";
     echo "<tr><th>Partei</th><th>Piirkond</th><th>Hääled</th></tr>";
-    foreach ($conn->query($sql) as $row) {
+    foreach ($conn->query($sql3) as $row) {
         echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td></tr>";
     }
     echo "</table>";
