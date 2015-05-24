@@ -86,7 +86,7 @@ function submitForm(fail) {
 
 function submitTyhista(fail) {
     nimi(fail);
-    $.ajax({ type: 'DELETE', url: fail, data: $('#vorm').serialize(), success: function (response) {
+    $.ajax({ type: 'POST', url: fail, data: $('#vorm').serialize(), success: function (response) {
         $('#vorm').find('.confirm').html(response);
         console.log(response);
     } 
@@ -95,7 +95,7 @@ function submitTyhista(fail) {
 }
 
 function submitSearch(fail) {
-    $.ajax({ type: 'GET', url: fail, data: $('#otsing').serialize(), success: 
+    $.ajax({ type: 'POST', url: fail, data: $('#otsing').serialize(), success: 
                 function (response) {
         $('#otsing').find('.confirm').html(response);
         console.log(response);
@@ -105,7 +105,7 @@ function submitSearch(fail) {
 }
 
 function submitTable1(fail) {
-    $.ajax({ type: 'GET', url: fail, data: $('#tabel1').serialize(), success: 
+    $.ajax({ type: 'POST', url: fail, data: $('#tabel1').serialize(), success: 
                 function (response) {
         $('#tabel1').find('.confirm').html(response);
         console.log(response);
@@ -115,7 +115,7 @@ function submitTable1(fail) {
 }
 
 function submitTable2(fail) {
-    $.ajax({ type: 'GET', url: fail, data: $('#tabel2').serialize(), success: 
+    $.ajax({ type: 'POST', url: fail, data: $('#tabel2').serialize(), success: 
                 function (response) {
         $('#tabel2').find('.confirm').html(response);
         console.log(response);
