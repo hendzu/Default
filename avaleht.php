@@ -10,6 +10,6 @@
 </ul>
 </p>
 <p>
-    Ilma sisse logimata saad Sa vaid vaadata kandidaate ja jälgida statistikat.
+    Ilma sisse logimata saad Sa vaid vaadata kandidaate ning jälgida statistikat.
 </p>
 </div>
